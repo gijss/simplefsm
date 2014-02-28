@@ -1,0 +1,9 @@
+grammar be.kuleuven.learning.simplefsm.Sfsm with org.eclipse.xtext.common.Terminals
+
+generate sfsm "http://www.kuleuven.be/learning/simplefsm/Sfsm"
+
+Model:
+	greetings+=Greeting*;
+	
+Greeting:
+	'Hello' name=ID '!';
