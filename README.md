@@ -16,5 +16,5 @@ Installation instructions
     2. Install [Xcore](https://wiki.eclipse.org/Xcore)
     3. Install [Xtext](https://www.eclipse.org/Xtext/)
     4. Install [Epsilon](https://www.eclipse.org/epsilon/)
-3. Create new Eclipse project and import sources
+3. Start Eclipse and import sources into workspace
 4.  ...
