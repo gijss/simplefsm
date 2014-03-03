@@ -1,28 +1,27 @@
 package be.kuleuven.learning.simplefsm
 
-class FiniteStateMachine 
+class SimpleFiniteStateMachine 
 {
 	String name
-	contains State[] ownedStates opposite owningFSM
-	contains Transition[] ownedTransitions opposite owningFSM
 	contains State initialState
-	contains State[1..*] finalStates
+	contains State[] states// opposite owningFSM
+	//contains Transition[] ownedTransitions opposite owningFSM
+	//contains State[1..*] finalStates //states with outgoingTransitions.size() == 0
 }
 
 class State 
 {
 	String name
-	String activity
-	refers Transition[] outgoingTransitions opposite source
-	refers Transition[] incomingTransitions opposite target
-	container FiniteStateMachine owningFSM opposite ownedStates
+	String action
+	contains Transition[] outgoingTransitions opposite source
+	//refers Transition[] incomingTransitions opposite target
+	//container SimpleFiniteStateMachine owningFSM opposite ownedStates
 }
 
 class Transition
 {
-	String name
-	refers State target opposite incomingTransitions
-	refers State source opposite outgoingTransitions
-	container FiniteStateMachine owningFSM opposite ownedTransitions	
-	String[] events
+	refers State target// opposite incomingTransitions
+	container State source opposite outgoingTransitions
+	//container SimpleFiniteStateMachine owningFSM opposite ownedTransitions	
+	String event
 }

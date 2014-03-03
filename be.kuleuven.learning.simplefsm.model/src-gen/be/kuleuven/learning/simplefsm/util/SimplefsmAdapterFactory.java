@@ -75,9 +75,9 @@ public class SimplefsmAdapterFactory extends AdapterFactoryImpl
     new SimplefsmSwitch<Adapter>()
     {
       @Override
-      public Adapter caseFiniteStateMachine(FiniteStateMachine object)
+      public Adapter caseSimpleFiniteStateMachine(SimpleFiniteStateMachine object)
       {
-        return createFiniteStateMachineAdapter();
+        return createSimpleFiniteStateMachineAdapter();
       }
       @Override
       public Adapter caseState(State object)
@@ -112,16 +112,16 @@ public class SimplefsmAdapterFactory extends AdapterFactoryImpl
 
 
   /**
-   * Creates a new adapter for an object of class '{@link be.kuleuven.learning.simplefsm.FiniteStateMachine <em>Finite State Machine</em>}'.
+   * Creates a new adapter for an object of class '{@link be.kuleuven.learning.simplefsm.SimpleFiniteStateMachine <em>Simple Finite State Machine</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
    * @return the new adapter.
-   * @see be.kuleuven.learning.simplefsm.FiniteStateMachine
+   * @see be.kuleuven.learning.simplefsm.SimpleFiniteStateMachine
    * @generated
    */
-  public Adapter createFiniteStateMachineAdapter()
+  public Adapter createSimpleFiniteStateMachineAdapter()
   {
     return null;
   }

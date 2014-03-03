@@ -64,7 +64,7 @@ public class SimplefsmFactoryImpl extends EFactoryImpl implements SimplefsmFacto
   {
     switch (eClass.getClassifierID())
     {
-      case SimplefsmPackage.FINITE_STATE_MACHINE: return createFiniteStateMachine();
+      case SimplefsmPackage.SIMPLE_FINITE_STATE_MACHINE: return createSimpleFiniteStateMachine();
       case SimplefsmPackage.STATE: return createState();
       case SimplefsmPackage.TRANSITION: return createTransition();
       default:
@@ -77,10 +77,10 @@ public class SimplefsmFactoryImpl extends EFactoryImpl implements SimplefsmFacto
    * <!-- end-user-doc -->
    * @generated
    */
-  public FiniteStateMachine createFiniteStateMachine()
+  public SimpleFiniteStateMachine createSimpleFiniteStateMachine()
   {
-    FiniteStateMachineImpl finiteStateMachine = new FiniteStateMachineImpl();
-    return finiteStateMachine;
+    SimpleFiniteStateMachineImpl simpleFiniteStateMachine = new SimpleFiniteStateMachineImpl();
+    return simpleFiniteStateMachine;
   }
 
   /**

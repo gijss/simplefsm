@@ -59,14 +59,14 @@ public interface SimplefsmPackage extends EPackage
   SimplefsmPackage eINSTANCE = be.kuleuven.learning.simplefsm.impl.SimplefsmPackageImpl.init();
 
   /**
-   * The meta object id for the '{@link be.kuleuven.learning.simplefsm.impl.FiniteStateMachineImpl <em>Finite State Machine</em>}' class.
+   * The meta object id for the '{@link be.kuleuven.learning.simplefsm.impl.SimpleFiniteStateMachineImpl <em>Simple Finite State Machine</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see be.kuleuven.learning.simplefsm.impl.FiniteStateMachineImpl
-   * @see be.kuleuven.learning.simplefsm.impl.SimplefsmPackageImpl#getFiniteStateMachine()
+   * @see be.kuleuven.learning.simplefsm.impl.SimpleFiniteStateMachineImpl
+   * @see be.kuleuven.learning.simplefsm.impl.SimplefsmPackageImpl#getSimpleFiniteStateMachine()
    * @generated
    */
-  int FINITE_STATE_MACHINE = 0;
+  int SIMPLE_FINITE_STATE_MACHINE = 0;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -75,25 +75,7 @@ public interface SimplefsmPackage extends EPackage
    * @generated
    * @ordered
    */
-  int FINITE_STATE_MACHINE__NAME = 0;
-
-  /**
-   * The feature id for the '<em><b>Owned States</b></em>' containment reference list.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int FINITE_STATE_MACHINE__OWNED_STATES = 1;
-
-  /**
-   * The feature id for the '<em><b>Owned Transitions</b></em>' containment reference list.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int FINITE_STATE_MACHINE__OWNED_TRANSITIONS = 2;
+  int SIMPLE_FINITE_STATE_MACHINE__NAME = 0;
 
   /**
    * The feature id for the '<em><b>Initial State</b></em>' containment reference.
@@ -102,34 +84,34 @@ public interface SimplefsmPackage extends EPackage
    * @generated
    * @ordered
    */
-  int FINITE_STATE_MACHINE__INITIAL_STATE = 3;
+  int SIMPLE_FINITE_STATE_MACHINE__INITIAL_STATE = 1;
 
   /**
-   * The feature id for the '<em><b>Final States</b></em>' containment reference list.
+   * The feature id for the '<em><b>States</b></em>' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int FINITE_STATE_MACHINE__FINAL_STATES = 4;
+  int SIMPLE_FINITE_STATE_MACHINE__STATES = 2;
 
   /**
-   * The number of structural features of the '<em>Finite State Machine</em>' class.
+   * The number of structural features of the '<em>Simple Finite State Machine</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int FINITE_STATE_MACHINE_FEATURE_COUNT = 5;
+  int SIMPLE_FINITE_STATE_MACHINE_FEATURE_COUNT = 3;
 
   /**
-   * The number of operations of the '<em>Finite State Machine</em>' class.
+   * The number of operations of the '<em>Simple Finite State Machine</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int FINITE_STATE_MACHINE_OPERATION_COUNT = 0;
+  int SIMPLE_FINITE_STATE_MACHINE_OPERATION_COUNT = 0;
 
   /**
    * The meta object id for the '{@link be.kuleuven.learning.simplefsm.impl.StateImpl <em>State</em>}' class.
@@ -151,16 +133,16 @@ public interface SimplefsmPackage extends EPackage
   int STATE__NAME = 0;
 
   /**
-   * The feature id for the '<em><b>Activity</b></em>' attribute.
+   * The feature id for the '<em><b>Action</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int STATE__ACTIVITY = 1;
+  int STATE__ACTION = 1;
 
   /**
-   * The feature id for the '<em><b>Outgoing Transitions</b></em>' reference list.
+   * The feature id for the '<em><b>Outgoing Transitions</b></em>' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
@@ -169,31 +151,13 @@ public interface SimplefsmPackage extends EPackage
   int STATE__OUTGOING_TRANSITIONS = 2;
 
   /**
-   * The feature id for the '<em><b>Incoming Transitions</b></em>' reference list.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int STATE__INCOMING_TRANSITIONS = 3;
-
-  /**
-   * The feature id for the '<em><b>Owning FSM</b></em>' container reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int STATE__OWNING_FSM = 4;
-
-  /**
    * The number of structural features of the '<em>State</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int STATE_FEATURE_COUNT = 5;
+  int STATE_FEATURE_COUNT = 3;
 
   /**
    * The number of operations of the '<em>State</em>' class.
@@ -215,49 +179,31 @@ public interface SimplefsmPackage extends EPackage
   int TRANSITION = 2;
 
   /**
-   * The feature id for the '<em><b>Name</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int TRANSITION__NAME = 0;
-
-  /**
    * The feature id for the '<em><b>Target</b></em>' reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int TRANSITION__TARGET = 1;
+  int TRANSITION__TARGET = 0;
 
   /**
-   * The feature id for the '<em><b>Source</b></em>' reference.
+   * The feature id for the '<em><b>Source</b></em>' container reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int TRANSITION__SOURCE = 2;
+  int TRANSITION__SOURCE = 1;
 
   /**
-   * The feature id for the '<em><b>Owning FSM</b></em>' container reference.
+   * The feature id for the '<em><b>Event</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int TRANSITION__OWNING_FSM = 3;
-
-  /**
-   * The feature id for the '<em><b>Events</b></em>' attribute list.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int TRANSITION__EVENTS = 4;
+  int TRANSITION__EVENT = 2;
 
   /**
    * The number of structural features of the '<em>Transition</em>' class.
@@ -266,7 +212,7 @@ public interface SimplefsmPackage extends EPackage
    * @generated
    * @ordered
    */
-  int TRANSITION_FEATURE_COUNT = 5;
+  int TRANSITION_FEATURE_COUNT = 3;
 
   /**
    * The number of operations of the '<em>Transition</em>' class.
@@ -279,69 +225,47 @@ public interface SimplefsmPackage extends EPackage
 
 
   /**
-   * Returns the meta object for class '{@link be.kuleuven.learning.simplefsm.FiniteStateMachine <em>Finite State Machine</em>}'.
+   * Returns the meta object for class '{@link be.kuleuven.learning.simplefsm.SimpleFiniteStateMachine <em>Simple Finite State Machine</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Finite State Machine</em>'.
-   * @see be.kuleuven.learning.simplefsm.FiniteStateMachine
+   * @return the meta object for class '<em>Simple Finite State Machine</em>'.
+   * @see be.kuleuven.learning.simplefsm.SimpleFiniteStateMachine
    * @generated
    */
-  EClass getFiniteStateMachine();
+  EClass getSimpleFiniteStateMachine();
 
   /**
-   * Returns the meta object for the attribute '{@link be.kuleuven.learning.simplefsm.FiniteStateMachine#getName <em>Name</em>}'.
+   * Returns the meta object for the attribute '{@link be.kuleuven.learning.simplefsm.SimpleFiniteStateMachine#getName <em>Name</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the attribute '<em>Name</em>'.
-   * @see be.kuleuven.learning.simplefsm.FiniteStateMachine#getName()
-   * @see #getFiniteStateMachine()
+   * @see be.kuleuven.learning.simplefsm.SimpleFiniteStateMachine#getName()
+   * @see #getSimpleFiniteStateMachine()
    * @generated
    */
-  EAttribute getFiniteStateMachine_Name();
+  EAttribute getSimpleFiniteStateMachine_Name();
 
   /**
-   * Returns the meta object for the containment reference list '{@link be.kuleuven.learning.simplefsm.FiniteStateMachine#getOwnedStates <em>Owned States</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference list '<em>Owned States</em>'.
-   * @see be.kuleuven.learning.simplefsm.FiniteStateMachine#getOwnedStates()
-   * @see #getFiniteStateMachine()
-   * @generated
-   */
-  EReference getFiniteStateMachine_OwnedStates();
-
-  /**
-   * Returns the meta object for the containment reference list '{@link be.kuleuven.learning.simplefsm.FiniteStateMachine#getOwnedTransitions <em>Owned Transitions</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference list '<em>Owned Transitions</em>'.
-   * @see be.kuleuven.learning.simplefsm.FiniteStateMachine#getOwnedTransitions()
-   * @see #getFiniteStateMachine()
-   * @generated
-   */
-  EReference getFiniteStateMachine_OwnedTransitions();
-
-  /**
-   * Returns the meta object for the containment reference '{@link be.kuleuven.learning.simplefsm.FiniteStateMachine#getInitialState <em>Initial State</em>}'.
+   * Returns the meta object for the containment reference '{@link be.kuleuven.learning.simplefsm.SimpleFiniteStateMachine#getInitialState <em>Initial State</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the containment reference '<em>Initial State</em>'.
-   * @see be.kuleuven.learning.simplefsm.FiniteStateMachine#getInitialState()
-   * @see #getFiniteStateMachine()
+   * @see be.kuleuven.learning.simplefsm.SimpleFiniteStateMachine#getInitialState()
+   * @see #getSimpleFiniteStateMachine()
    * @generated
    */
-  EReference getFiniteStateMachine_InitialState();
+  EReference getSimpleFiniteStateMachine_InitialState();
 
   /**
-   * Returns the meta object for the containment reference list '{@link be.kuleuven.learning.simplefsm.FiniteStateMachine#getFinalStates <em>Final States</em>}'.
+   * Returns the meta object for the containment reference list '{@link be.kuleuven.learning.simplefsm.SimpleFiniteStateMachine#getStates <em>States</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the containment reference list '<em>Final States</em>'.
-   * @see be.kuleuven.learning.simplefsm.FiniteStateMachine#getFinalStates()
-   * @see #getFiniteStateMachine()
+   * @return the meta object for the containment reference list '<em>States</em>'.
+   * @see be.kuleuven.learning.simplefsm.SimpleFiniteStateMachine#getStates()
+   * @see #getSimpleFiniteStateMachine()
    * @generated
    */
-  EReference getFiniteStateMachine_FinalStates();
+  EReference getSimpleFiniteStateMachine_States();
 
   /**
    * Returns the meta object for class '{@link be.kuleuven.learning.simplefsm.State <em>State</em>}'.
@@ -365,48 +289,26 @@ public interface SimplefsmPackage extends EPackage
   EAttribute getState_Name();
 
   /**
-   * Returns the meta object for the attribute '{@link be.kuleuven.learning.simplefsm.State#getActivity <em>Activity</em>}'.
+   * Returns the meta object for the attribute '{@link be.kuleuven.learning.simplefsm.State#getAction <em>Action</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Activity</em>'.
-   * @see be.kuleuven.learning.simplefsm.State#getActivity()
+   * @return the meta object for the attribute '<em>Action</em>'.
+   * @see be.kuleuven.learning.simplefsm.State#getAction()
    * @see #getState()
    * @generated
    */
-  EAttribute getState_Activity();
+  EAttribute getState_Action();
 
   /**
-   * Returns the meta object for the reference list '{@link be.kuleuven.learning.simplefsm.State#getOutgoingTransitions <em>Outgoing Transitions</em>}'.
+   * Returns the meta object for the containment reference list '{@link be.kuleuven.learning.simplefsm.State#getOutgoingTransitions <em>Outgoing Transitions</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the reference list '<em>Outgoing Transitions</em>'.
+   * @return the meta object for the containment reference list '<em>Outgoing Transitions</em>'.
    * @see be.kuleuven.learning.simplefsm.State#getOutgoingTransitions()
    * @see #getState()
    * @generated
    */
   EReference getState_OutgoingTransitions();
-
-  /**
-   * Returns the meta object for the reference list '{@link be.kuleuven.learning.simplefsm.State#getIncomingTransitions <em>Incoming Transitions</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the reference list '<em>Incoming Transitions</em>'.
-   * @see be.kuleuven.learning.simplefsm.State#getIncomingTransitions()
-   * @see #getState()
-   * @generated
-   */
-  EReference getState_IncomingTransitions();
-
-  /**
-   * Returns the meta object for the container reference '{@link be.kuleuven.learning.simplefsm.State#getOwningFSM <em>Owning FSM</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the container reference '<em>Owning FSM</em>'.
-   * @see be.kuleuven.learning.simplefsm.State#getOwningFSM()
-   * @see #getState()
-   * @generated
-   */
-  EReference getState_OwningFSM();
 
   /**
    * Returns the meta object for class '{@link be.kuleuven.learning.simplefsm.Transition <em>Transition</em>}'.
@@ -417,17 +319,6 @@ public interface SimplefsmPackage extends EPackage
    * @generated
    */
   EClass getTransition();
-
-  /**
-   * Returns the meta object for the attribute '{@link be.kuleuven.learning.simplefsm.Transition#getName <em>Name</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Name</em>'.
-   * @see be.kuleuven.learning.simplefsm.Transition#getName()
-   * @see #getTransition()
-   * @generated
-   */
-  EAttribute getTransition_Name();
 
   /**
    * Returns the meta object for the reference '{@link be.kuleuven.learning.simplefsm.Transition#getTarget <em>Target</em>}'.
@@ -441,10 +332,10 @@ public interface SimplefsmPackage extends EPackage
   EReference getTransition_Target();
 
   /**
-   * Returns the meta object for the reference '{@link be.kuleuven.learning.simplefsm.Transition#getSource <em>Source</em>}'.
+   * Returns the meta object for the container reference '{@link be.kuleuven.learning.simplefsm.Transition#getSource <em>Source</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the reference '<em>Source</em>'.
+   * @return the meta object for the container reference '<em>Source</em>'.
    * @see be.kuleuven.learning.simplefsm.Transition#getSource()
    * @see #getTransition()
    * @generated
@@ -452,26 +343,15 @@ public interface SimplefsmPackage extends EPackage
   EReference getTransition_Source();
 
   /**
-   * Returns the meta object for the container reference '{@link be.kuleuven.learning.simplefsm.Transition#getOwningFSM <em>Owning FSM</em>}'.
+   * Returns the meta object for the attribute '{@link be.kuleuven.learning.simplefsm.Transition#getEvent <em>Event</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the container reference '<em>Owning FSM</em>'.
-   * @see be.kuleuven.learning.simplefsm.Transition#getOwningFSM()
+   * @return the meta object for the attribute '<em>Event</em>'.
+   * @see be.kuleuven.learning.simplefsm.Transition#getEvent()
    * @see #getTransition()
    * @generated
    */
-  EReference getTransition_OwningFSM();
-
-  /**
-   * Returns the meta object for the attribute list '{@link be.kuleuven.learning.simplefsm.Transition#getEvents <em>Events</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute list '<em>Events</em>'.
-   * @see be.kuleuven.learning.simplefsm.Transition#getEvents()
-   * @see #getTransition()
-   * @generated
-   */
-  EAttribute getTransition_Events();
+  EAttribute getTransition_Event();
 
   /**
    * Returns the factory that creates the instances of the model.
@@ -498,14 +378,14 @@ public interface SimplefsmPackage extends EPackage
   interface Literals
   {
     /**
-     * The meta object literal for the '{@link be.kuleuven.learning.simplefsm.impl.FiniteStateMachineImpl <em>Finite State Machine</em>}' class.
+     * The meta object literal for the '{@link be.kuleuven.learning.simplefsm.impl.SimpleFiniteStateMachineImpl <em>Simple Finite State Machine</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @see be.kuleuven.learning.simplefsm.impl.FiniteStateMachineImpl
-     * @see be.kuleuven.learning.simplefsm.impl.SimplefsmPackageImpl#getFiniteStateMachine()
+     * @see be.kuleuven.learning.simplefsm.impl.SimpleFiniteStateMachineImpl
+     * @see be.kuleuven.learning.simplefsm.impl.SimplefsmPackageImpl#getSimpleFiniteStateMachine()
      * @generated
      */
-    EClass FINITE_STATE_MACHINE = eINSTANCE.getFiniteStateMachine();
+    EClass SIMPLE_FINITE_STATE_MACHINE = eINSTANCE.getSimpleFiniteStateMachine();
 
     /**
      * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
@@ -513,23 +393,7 @@ public interface SimplefsmPackage extends EPackage
      * <!-- end-user-doc -->
      * @generated
      */
-    EAttribute FINITE_STATE_MACHINE__NAME = eINSTANCE.getFiniteStateMachine_Name();
-
-    /**
-     * The meta object literal for the '<em><b>Owned States</b></em>' containment reference list feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EReference FINITE_STATE_MACHINE__OWNED_STATES = eINSTANCE.getFiniteStateMachine_OwnedStates();
-
-    /**
-     * The meta object literal for the '<em><b>Owned Transitions</b></em>' containment reference list feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EReference FINITE_STATE_MACHINE__OWNED_TRANSITIONS = eINSTANCE.getFiniteStateMachine_OwnedTransitions();
+    EAttribute SIMPLE_FINITE_STATE_MACHINE__NAME = eINSTANCE.getSimpleFiniteStateMachine_Name();
 
     /**
      * The meta object literal for the '<em><b>Initial State</b></em>' containment reference feature.
@@ -537,15 +401,15 @@ public interface SimplefsmPackage extends EPackage
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference FINITE_STATE_MACHINE__INITIAL_STATE = eINSTANCE.getFiniteStateMachine_InitialState();
+    EReference SIMPLE_FINITE_STATE_MACHINE__INITIAL_STATE = eINSTANCE.getSimpleFiniteStateMachine_InitialState();
 
     /**
-     * The meta object literal for the '<em><b>Final States</b></em>' containment reference list feature.
+     * The meta object literal for the '<em><b>States</b></em>' containment reference list feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference FINITE_STATE_MACHINE__FINAL_STATES = eINSTANCE.getFiniteStateMachine_FinalStates();
+    EReference SIMPLE_FINITE_STATE_MACHINE__STATES = eINSTANCE.getSimpleFiniteStateMachine_States();
 
     /**
      * The meta object literal for the '{@link be.kuleuven.learning.simplefsm.impl.StateImpl <em>State</em>}' class.
@@ -566,36 +430,20 @@ public interface SimplefsmPackage extends EPackage
     EAttribute STATE__NAME = eINSTANCE.getState_Name();
 
     /**
-     * The meta object literal for the '<em><b>Activity</b></em>' attribute feature.
+     * The meta object literal for the '<em><b>Action</b></em>' attribute feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EAttribute STATE__ACTIVITY = eINSTANCE.getState_Activity();
+    EAttribute STATE__ACTION = eINSTANCE.getState_Action();
 
     /**
-     * The meta object literal for the '<em><b>Outgoing Transitions</b></em>' reference list feature.
+     * The meta object literal for the '<em><b>Outgoing Transitions</b></em>' containment reference list feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
     EReference STATE__OUTGOING_TRANSITIONS = eINSTANCE.getState_OutgoingTransitions();
-
-    /**
-     * The meta object literal for the '<em><b>Incoming Transitions</b></em>' reference list feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EReference STATE__INCOMING_TRANSITIONS = eINSTANCE.getState_IncomingTransitions();
-
-    /**
-     * The meta object literal for the '<em><b>Owning FSM</b></em>' container reference feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EReference STATE__OWNING_FSM = eINSTANCE.getState_OwningFSM();
 
     /**
      * The meta object literal for the '{@link be.kuleuven.learning.simplefsm.impl.TransitionImpl <em>Transition</em>}' class.
@@ -608,14 +456,6 @@ public interface SimplefsmPackage extends EPackage
     EClass TRANSITION = eINSTANCE.getTransition();
 
     /**
-     * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute TRANSITION__NAME = eINSTANCE.getTransition_Name();
-
-    /**
      * The meta object literal for the '<em><b>Target</b></em>' reference feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -624,7 +464,7 @@ public interface SimplefsmPackage extends EPackage
     EReference TRANSITION__TARGET = eINSTANCE.getTransition_Target();
 
     /**
-     * The meta object literal for the '<em><b>Source</b></em>' reference feature.
+     * The meta object literal for the '<em><b>Source</b></em>' container reference feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
@@ -632,20 +472,12 @@ public interface SimplefsmPackage extends EPackage
     EReference TRANSITION__SOURCE = eINSTANCE.getTransition_Source();
 
     /**
-     * The meta object literal for the '<em><b>Owning FSM</b></em>' container reference feature.
+     * The meta object literal for the '<em><b>Event</b></em>' attribute feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference TRANSITION__OWNING_FSM = eINSTANCE.getTransition_OwningFSM();
-
-    /**
-     * The meta object literal for the '<em><b>Events</b></em>' attribute list feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute TRANSITION__EVENTS = eINSTANCE.getTransition_Events();
+    EAttribute TRANSITION__EVENT = eINSTANCE.getTransition_Event();
 
   }
 

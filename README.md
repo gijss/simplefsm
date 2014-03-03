@@ -18,3 +18,8 @@ Installation instructions
     4. Install [Epsilon](https://www.eclipse.org/epsilon/)
 3. Start Eclipse and import sources into workspace
 4.  ...
+
+More information
+---
+
+In the doc folder of the project, more information can be found.

@@ -2,7 +2,6 @@
  */
 package be.kuleuven.learning.simplefsm.impl;
 
-import be.kuleuven.learning.simplefsm.FiniteStateMachine;
 import be.kuleuven.learning.simplefsm.SimplefsmPackage;
 import be.kuleuven.learning.simplefsm.State;
 import be.kuleuven.learning.simplefsm.Transition;
@@ -20,8 +19,7 @@ import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
-import org.eclipse.emf.ecore.util.EObjectWithInverseResolvingEList;
-import org.eclipse.emf.ecore.util.EcoreUtil;
+import org.eclipse.emf.ecore.util.EObjectContainmentWithInverseEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
@@ -32,10 +30,8 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * The following features are implemented:
  * <ul>
  *   <li>{@link be.kuleuven.learning.simplefsm.impl.StateImpl#getName <em>Name</em>}</li>
- *   <li>{@link be.kuleuven.learning.simplefsm.impl.StateImpl#getActivity <em>Activity</em>}</li>
+ *   <li>{@link be.kuleuven.learning.simplefsm.impl.StateImpl#getAction <em>Action</em>}</li>
  *   <li>{@link be.kuleuven.learning.simplefsm.impl.StateImpl#getOutgoingTransitions <em>Outgoing Transitions</em>}</li>
- *   <li>{@link be.kuleuven.learning.simplefsm.impl.StateImpl#getIncomingTransitions <em>Incoming Transitions</em>}</li>
- *   <li>{@link be.kuleuven.learning.simplefsm.impl.StateImpl#getOwningFSM <em>Owning FSM</em>}</li>
  * </ul>
  * </p>
  *
@@ -64,27 +60,27 @@ public class StateImpl extends MinimalEObjectImpl.Container implements State
   protected String name = NAME_EDEFAULT;
 
   /**
-   * The default value of the '{@link #getActivity() <em>Activity</em>}' attribute.
+   * The default value of the '{@link #getAction() <em>Action</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getActivity()
+   * @see #getAction()
    * @generated
    * @ordered
    */
-  protected static final String ACTIVITY_EDEFAULT = null;
+  protected static final String ACTION_EDEFAULT = null;
 
   /**
-   * The cached value of the '{@link #getActivity() <em>Activity</em>}' attribute.
+   * The cached value of the '{@link #getAction() <em>Action</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getActivity()
+   * @see #getAction()
    * @generated
    * @ordered
    */
-  protected String activity = ACTIVITY_EDEFAULT;
+  protected String action = ACTION_EDEFAULT;
 
   /**
-   * The cached value of the '{@link #getOutgoingTransitions() <em>Outgoing Transitions</em>}' reference list.
+   * The cached value of the '{@link #getOutgoingTransitions() <em>Outgoing Transitions</em>}' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @see #getOutgoingTransitions()
@@ -92,16 +88,6 @@ public class StateImpl extends MinimalEObjectImpl.Container implements State
    * @ordered
    */
   protected EList<Transition> outgoingTransitions;
-
-  /**
-   * The cached value of the '{@link #getIncomingTransitions() <em>Incoming Transitions</em>}' reference list.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getIncomingTransitions()
-   * @generated
-   * @ordered
-   */
-  protected EList<Transition> incomingTransitions;
 
   /**
    * <!-- begin-user-doc -->
@@ -152,9 +138,9 @@ public class StateImpl extends MinimalEObjectImpl.Container implements State
    * <!-- end-user-doc -->
    * @generated
    */
-  public String getActivity()
+  public String getAction()
   {
-    return activity;
+    return action;
   }
 
   /**
@@ -162,12 +148,12 @@ public class StateImpl extends MinimalEObjectImpl.Container implements State
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setActivity(String newActivity)
+  public void setAction(String newAction)
   {
-    String oldActivity = activity;
-    activity = newActivity;
+    String oldAction = action;
+    action = newAction;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, SimplefsmPackage.STATE__ACTIVITY, oldActivity, activity));
+      eNotify(new ENotificationImpl(this, Notification.SET, SimplefsmPackage.STATE__ACTION, oldAction, action));
   }
 
   /**
@@ -179,79 +165,9 @@ public class StateImpl extends MinimalEObjectImpl.Container implements State
   {
     if (outgoingTransitions == null)
     {
-      outgoingTransitions = new EObjectWithInverseResolvingEList<Transition>(Transition.class, this, SimplefsmPackage.STATE__OUTGOING_TRANSITIONS, SimplefsmPackage.TRANSITION__SOURCE);
+      outgoingTransitions = new EObjectContainmentWithInverseEList<Transition>(Transition.class, this, SimplefsmPackage.STATE__OUTGOING_TRANSITIONS, SimplefsmPackage.TRANSITION__SOURCE);
     }
     return outgoingTransitions;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EList<Transition> getIncomingTransitions()
-  {
-    if (incomingTransitions == null)
-    {
-      incomingTransitions = new EObjectWithInverseResolvingEList<Transition>(Transition.class, this, SimplefsmPackage.STATE__INCOMING_TRANSITIONS, SimplefsmPackage.TRANSITION__TARGET);
-    }
-    return incomingTransitions;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public FiniteStateMachine getOwningFSM()
-  {
-    if (eContainerFeatureID() != SimplefsmPackage.STATE__OWNING_FSM) return null;
-    return (FiniteStateMachine)eContainer();
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public FiniteStateMachine basicGetOwningFSM()
-  {
-    if (eContainerFeatureID() != SimplefsmPackage.STATE__OWNING_FSM) return null;
-    return (FiniteStateMachine)eInternalContainer();
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public NotificationChain basicSetOwningFSM(FiniteStateMachine newOwningFSM, NotificationChain msgs)
-  {
-    msgs = eBasicSetContainer((InternalEObject)newOwningFSM, SimplefsmPackage.STATE__OWNING_FSM, msgs);
-    return msgs;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public void setOwningFSM(FiniteStateMachine newOwningFSM)
-  {
-    if (newOwningFSM != eInternalContainer() || (eContainerFeatureID() != SimplefsmPackage.STATE__OWNING_FSM && newOwningFSM != null))
-    {
-      if (EcoreUtil.isAncestor(this, newOwningFSM))
-        throw new IllegalArgumentException("Recursive containment not allowed for " + toString());
-      NotificationChain msgs = null;
-      if (eInternalContainer() != null)
-        msgs = eBasicRemoveFromContainer(msgs);
-      if (newOwningFSM != null)
-        msgs = ((InternalEObject)newOwningFSM).eInverseAdd(this, SimplefsmPackage.FINITE_STATE_MACHINE__OWNED_STATES, FiniteStateMachine.class, msgs);
-      msgs = basicSetOwningFSM(newOwningFSM, msgs);
-      if (msgs != null) msgs.dispatch();
-    }
-    else if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, SimplefsmPackage.STATE__OWNING_FSM, newOwningFSM, newOwningFSM));
   }
 
   /**
@@ -267,12 +183,6 @@ public class StateImpl extends MinimalEObjectImpl.Container implements State
     {
       case SimplefsmPackage.STATE__OUTGOING_TRANSITIONS:
         return ((InternalEList<InternalEObject>)(InternalEList<?>)getOutgoingTransitions()).basicAdd(otherEnd, msgs);
-      case SimplefsmPackage.STATE__INCOMING_TRANSITIONS:
-        return ((InternalEList<InternalEObject>)(InternalEList<?>)getIncomingTransitions()).basicAdd(otherEnd, msgs);
-      case SimplefsmPackage.STATE__OWNING_FSM:
-        if (eInternalContainer() != null)
-          msgs = eBasicRemoveFromContainer(msgs);
-        return basicSetOwningFSM((FiniteStateMachine)otherEnd, msgs);
     }
     return super.eInverseAdd(otherEnd, featureID, msgs);
   }
@@ -289,28 +199,8 @@ public class StateImpl extends MinimalEObjectImpl.Container implements State
     {
       case SimplefsmPackage.STATE__OUTGOING_TRANSITIONS:
         return ((InternalEList<?>)getOutgoingTransitions()).basicRemove(otherEnd, msgs);
-      case SimplefsmPackage.STATE__INCOMING_TRANSITIONS:
-        return ((InternalEList<?>)getIncomingTransitions()).basicRemove(otherEnd, msgs);
-      case SimplefsmPackage.STATE__OWNING_FSM:
-        return basicSetOwningFSM(null, msgs);
     }
     return super.eInverseRemove(otherEnd, featureID, msgs);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public NotificationChain eBasicRemoveFromContainerFeature(NotificationChain msgs)
-  {
-    switch (eContainerFeatureID())
-    {
-      case SimplefsmPackage.STATE__OWNING_FSM:
-        return eInternalContainer().eInverseRemove(this, SimplefsmPackage.FINITE_STATE_MACHINE__OWNED_STATES, FiniteStateMachine.class, msgs);
-    }
-    return super.eBasicRemoveFromContainerFeature(msgs);
   }
 
   /**
@@ -325,15 +215,10 @@ public class StateImpl extends MinimalEObjectImpl.Container implements State
     {
       case SimplefsmPackage.STATE__NAME:
         return getName();
-      case SimplefsmPackage.STATE__ACTIVITY:
-        return getActivity();
+      case SimplefsmPackage.STATE__ACTION:
+        return getAction();
       case SimplefsmPackage.STATE__OUTGOING_TRANSITIONS:
         return getOutgoingTransitions();
-      case SimplefsmPackage.STATE__INCOMING_TRANSITIONS:
-        return getIncomingTransitions();
-      case SimplefsmPackage.STATE__OWNING_FSM:
-        if (resolve) return getOwningFSM();
-        return basicGetOwningFSM();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -352,19 +237,12 @@ public class StateImpl extends MinimalEObjectImpl.Container implements State
       case SimplefsmPackage.STATE__NAME:
         setName((String)newValue);
         return;
-      case SimplefsmPackage.STATE__ACTIVITY:
-        setActivity((String)newValue);
+      case SimplefsmPackage.STATE__ACTION:
+        setAction((String)newValue);
         return;
       case SimplefsmPackage.STATE__OUTGOING_TRANSITIONS:
         getOutgoingTransitions().clear();
         getOutgoingTransitions().addAll((Collection<? extends Transition>)newValue);
-        return;
-      case SimplefsmPackage.STATE__INCOMING_TRANSITIONS:
-        getIncomingTransitions().clear();
-        getIncomingTransitions().addAll((Collection<? extends Transition>)newValue);
-        return;
-      case SimplefsmPackage.STATE__OWNING_FSM:
-        setOwningFSM((FiniteStateMachine)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -383,17 +261,11 @@ public class StateImpl extends MinimalEObjectImpl.Container implements State
       case SimplefsmPackage.STATE__NAME:
         setName(NAME_EDEFAULT);
         return;
-      case SimplefsmPackage.STATE__ACTIVITY:
-        setActivity(ACTIVITY_EDEFAULT);
+      case SimplefsmPackage.STATE__ACTION:
+        setAction(ACTION_EDEFAULT);
         return;
       case SimplefsmPackage.STATE__OUTGOING_TRANSITIONS:
         getOutgoingTransitions().clear();
-        return;
-      case SimplefsmPackage.STATE__INCOMING_TRANSITIONS:
-        getIncomingTransitions().clear();
-        return;
-      case SimplefsmPackage.STATE__OWNING_FSM:
-        setOwningFSM((FiniteStateMachine)null);
         return;
     }
     super.eUnset(featureID);
@@ -411,14 +283,10 @@ public class StateImpl extends MinimalEObjectImpl.Container implements State
     {
       case SimplefsmPackage.STATE__NAME:
         return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
-      case SimplefsmPackage.STATE__ACTIVITY:
-        return ACTIVITY_EDEFAULT == null ? activity != null : !ACTIVITY_EDEFAULT.equals(activity);
+      case SimplefsmPackage.STATE__ACTION:
+        return ACTION_EDEFAULT == null ? action != null : !ACTION_EDEFAULT.equals(action);
       case SimplefsmPackage.STATE__OUTGOING_TRANSITIONS:
         return outgoingTransitions != null && !outgoingTransitions.isEmpty();
-      case SimplefsmPackage.STATE__INCOMING_TRANSITIONS:
-        return incomingTransitions != null && !incomingTransitions.isEmpty();
-      case SimplefsmPackage.STATE__OWNING_FSM:
-        return basicGetOwningFSM() != null;
     }
     return super.eIsSet(featureID);
   }
@@ -436,8 +304,8 @@ public class StateImpl extends MinimalEObjectImpl.Container implements State
     StringBuffer result = new StringBuffer(super.toString());
     result.append(" (name: ");
     result.append(name);
-    result.append(", activity: ");
-    result.append(activity);
+    result.append(", action: ");
+    result.append(action);
     result.append(')');
     return result.toString();
   }

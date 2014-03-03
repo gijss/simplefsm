@@ -1,9 +1,24 @@
 grammar be.kuleuven.learning.simplefsm.Sfsm with org.eclipse.xtext.common.Terminals
 
-generate sfsm "http://www.kuleuven.be/learning/simplefsm/Sfsm"
+//generate sfsm "http://www.kuleuven.be/learning/simplefsm/Sfsm"
+import "be.kuleuven.learning.simplefsm"
 
-Model:
-	greetings+=Greeting*;
-	
-Greeting:
-	'Hello' name=ID '!';
+SimpleFiniteStateMachine:
+	'sfsm' name=ID
+	'{'
+		'initial' initialState = State
+		(states += State)*
+	'}'
+;
+
+State returns State:
+	'state' name=ID
+	'{'
+		'action' STRING
+		(outgoingTransitions += Transition)*
+	'}'
+;
+
+Transition returns Transition:
+	'event' event=STRING  'goto' target=[State|ID]
+;

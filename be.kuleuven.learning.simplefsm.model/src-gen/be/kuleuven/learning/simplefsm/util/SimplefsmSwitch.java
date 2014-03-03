@@ -72,10 +72,10 @@ public class SimplefsmSwitch<T> extends Switch<T>
   {
     switch (classifierID)
     {
-      case SimplefsmPackage.FINITE_STATE_MACHINE:
+      case SimplefsmPackage.SIMPLE_FINITE_STATE_MACHINE:
       {
-        FiniteStateMachine finiteStateMachine = (FiniteStateMachine)theEObject;
-        T result = caseFiniteStateMachine(finiteStateMachine);
+        SimpleFiniteStateMachine simpleFiniteStateMachine = (SimpleFiniteStateMachine)theEObject;
+        T result = caseSimpleFiniteStateMachine(simpleFiniteStateMachine);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -98,17 +98,17 @@ public class SimplefsmSwitch<T> extends Switch<T>
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>Finite State Machine</em>'.
+   * Returns the result of interpreting the object as an instance of '<em>Simple Finite State Machine</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
    * returning a non-null result will terminate the switch.
    * <!-- end-user-doc -->
    * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Finite State Machine</em>'.
+   * @return the result of interpreting the object as an instance of '<em>Simple Finite State Machine</em>'.
    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
    * @generated
    */
-  public T caseFiniteStateMachine(FiniteStateMachine object)
+  public T caseSimpleFiniteStateMachine(SimpleFiniteStateMachine object)
   {
     return null;
   }

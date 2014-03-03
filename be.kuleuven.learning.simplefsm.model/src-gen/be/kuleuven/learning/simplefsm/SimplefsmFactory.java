@@ -23,13 +23,13 @@ public interface SimplefsmFactory extends EFactory
   SimplefsmFactory eINSTANCE = be.kuleuven.learning.simplefsm.impl.SimplefsmFactoryImpl.init();
 
   /**
-   * Returns a new object of class '<em>Finite State Machine</em>'.
+   * Returns a new object of class '<em>Simple Finite State Machine</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>Finite State Machine</em>'.
+   * @return a new object of class '<em>Simple Finite State Machine</em>'.
    * @generated
    */
-  FiniteStateMachine createFiniteStateMachine();
+  SimpleFiniteStateMachine createSimpleFiniteStateMachine();
 
   /**
    * Returns a new object of class '<em>State</em>'.
