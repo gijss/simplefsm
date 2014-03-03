@@ -21,7 +21,7 @@ import java.util.ArrayList;
 @SuppressWarnings("all")
 public class InternalSfsmParser extends AbstractInternalAntlrParser {
     public static final String[] tokenNames = new String[] {
-        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_ID", "RULE_STRING", "RULE_INT", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'sfsm'", "'{'", "'initial'", "'}'", "'state'", "'action'", "'event'", "'gotos'"
+        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_ID", "RULE_STRING", "RULE_INT", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'sfsm'", "'{'", "'initial'", "'}'", "'state'", "'action'", "'event'", "'goto'"
     };
     public static final int RULE_ID=4;
     public static final int RULE_STRING=5;
@@ -115,7 +115,7 @@ public class InternalSfsmParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleSimpleFiniteStateMachine"
-    // ../be.kuleuven.learning.simplefsm.dsl/src-gen/be/kuleuven/learning/simplefsm/parser/antlr/internal/InternalSfsm.g:76:1: ruleSimpleFiniteStateMachine returns [EObject current=null] : (otherlv_0= 'sfsm' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' otherlv_3= 'initial' ( (lv_initialState_4_0= ruleState ) ) ( (lv_states_5_0= ruleState ) )* otherlv_6= '}' ) ;
+    // ../be.kuleuven.learning.simplefsm.dsl/src-gen/be/kuleuven/learning/simplefsm/parser/antlr/internal/InternalSfsm.g:76:1: ruleSimpleFiniteStateMachine returns [EObject current=null] : (otherlv_0= 'sfsm' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' otherlv_3= 'initial' ( (lv_states_4_0= ruleState ) ) ( (lv_states_5_0= ruleState ) )* otherlv_6= '}' ) ;
     public final EObject ruleSimpleFiniteStateMachine() throws RecognitionException {
         EObject current = null;
 
@@ -124,7 +124,7 @@ public class InternalSfsmParser extends AbstractInternalAntlrParser {
         Token otherlv_2=null;
         Token otherlv_3=null;
         Token otherlv_6=null;
-        EObject lv_initialState_4_0 = null;
+        EObject lv_states_4_0 = null;
 
         EObject lv_states_5_0 = null;
 
@@ -132,11 +132,11 @@ public class InternalSfsmParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../be.kuleuven.learning.simplefsm.dsl/src-gen/be/kuleuven/learning/simplefsm/parser/antlr/internal/InternalSfsm.g:79:28: ( (otherlv_0= 'sfsm' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' otherlv_3= 'initial' ( (lv_initialState_4_0= ruleState ) ) ( (lv_states_5_0= ruleState ) )* otherlv_6= '}' ) )
-            // ../be.kuleuven.learning.simplefsm.dsl/src-gen/be/kuleuven/learning/simplefsm/parser/antlr/internal/InternalSfsm.g:80:1: (otherlv_0= 'sfsm' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' otherlv_3= 'initial' ( (lv_initialState_4_0= ruleState ) ) ( (lv_states_5_0= ruleState ) )* otherlv_6= '}' )
+            // ../be.kuleuven.learning.simplefsm.dsl/src-gen/be/kuleuven/learning/simplefsm/parser/antlr/internal/InternalSfsm.g:79:28: ( (otherlv_0= 'sfsm' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' otherlv_3= 'initial' ( (lv_states_4_0= ruleState ) ) ( (lv_states_5_0= ruleState ) )* otherlv_6= '}' ) )
+            // ../be.kuleuven.learning.simplefsm.dsl/src-gen/be/kuleuven/learning/simplefsm/parser/antlr/internal/InternalSfsm.g:80:1: (otherlv_0= 'sfsm' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' otherlv_3= 'initial' ( (lv_states_4_0= ruleState ) ) ( (lv_states_5_0= ruleState ) )* otherlv_6= '}' )
             {
-            // ../be.kuleuven.learning.simplefsm.dsl/src-gen/be/kuleuven/learning/simplefsm/parser/antlr/internal/InternalSfsm.g:80:1: (otherlv_0= 'sfsm' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' otherlv_3= 'initial' ( (lv_initialState_4_0= ruleState ) ) ( (lv_states_5_0= ruleState ) )* otherlv_6= '}' )
-            // ../be.kuleuven.learning.simplefsm.dsl/src-gen/be/kuleuven/learning/simplefsm/parser/antlr/internal/InternalSfsm.g:80:3: otherlv_0= 'sfsm' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' otherlv_3= 'initial' ( (lv_initialState_4_0= ruleState ) ) ( (lv_states_5_0= ruleState ) )* otherlv_6= '}'
+            // ../be.kuleuven.learning.simplefsm.dsl/src-gen/be/kuleuven/learning/simplefsm/parser/antlr/internal/InternalSfsm.g:80:1: (otherlv_0= 'sfsm' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' otherlv_3= 'initial' ( (lv_states_4_0= ruleState ) ) ( (lv_states_5_0= ruleState ) )* otherlv_6= '}' )
+            // ../be.kuleuven.learning.simplefsm.dsl/src-gen/be/kuleuven/learning/simplefsm/parser/antlr/internal/InternalSfsm.g:80:3: otherlv_0= 'sfsm' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' otherlv_3= 'initial' ( (lv_states_4_0= ruleState ) ) ( (lv_states_5_0= ruleState ) )* otherlv_6= '}'
             {
             otherlv_0=(Token)match(input,11,FOLLOW_11_in_ruleSimpleFiniteStateMachine122); 
 
@@ -176,17 +176,17 @@ public class InternalSfsmParser extends AbstractInternalAntlrParser {
 
                 	newLeafNode(otherlv_3, grammarAccess.getSimpleFiniteStateMachineAccess().getInitialKeyword_3());
                 
-            // ../be.kuleuven.learning.simplefsm.dsl/src-gen/be/kuleuven/learning/simplefsm/parser/antlr/internal/InternalSfsm.g:110:1: ( (lv_initialState_4_0= ruleState ) )
-            // ../be.kuleuven.learning.simplefsm.dsl/src-gen/be/kuleuven/learning/simplefsm/parser/antlr/internal/InternalSfsm.g:111:1: (lv_initialState_4_0= ruleState )
+            // ../be.kuleuven.learning.simplefsm.dsl/src-gen/be/kuleuven/learning/simplefsm/parser/antlr/internal/InternalSfsm.g:110:1: ( (lv_states_4_0= ruleState ) )
+            // ../be.kuleuven.learning.simplefsm.dsl/src-gen/be/kuleuven/learning/simplefsm/parser/antlr/internal/InternalSfsm.g:111:1: (lv_states_4_0= ruleState )
             {
-            // ../be.kuleuven.learning.simplefsm.dsl/src-gen/be/kuleuven/learning/simplefsm/parser/antlr/internal/InternalSfsm.g:111:1: (lv_initialState_4_0= ruleState )
-            // ../be.kuleuven.learning.simplefsm.dsl/src-gen/be/kuleuven/learning/simplefsm/parser/antlr/internal/InternalSfsm.g:112:3: lv_initialState_4_0= ruleState
+            // ../be.kuleuven.learning.simplefsm.dsl/src-gen/be/kuleuven/learning/simplefsm/parser/antlr/internal/InternalSfsm.g:111:1: (lv_states_4_0= ruleState )
+            // ../be.kuleuven.learning.simplefsm.dsl/src-gen/be/kuleuven/learning/simplefsm/parser/antlr/internal/InternalSfsm.g:112:3: lv_states_4_0= ruleState
             {
              
-            	        newCompositeNode(grammarAccess.getSimpleFiniteStateMachineAccess().getInitialStateStateParserRuleCall_4_0()); 
+            	        newCompositeNode(grammarAccess.getSimpleFiniteStateMachineAccess().getStatesStateParserRuleCall_4_0()); 
             	    
             pushFollow(FOLLOW_ruleState_in_ruleSimpleFiniteStateMachine189);
-            lv_initialState_4_0=ruleState();
+            lv_states_4_0=ruleState();
 
             state._fsp--;
 
@@ -194,10 +194,10 @@ public class InternalSfsmParser extends AbstractInternalAntlrParser {
             	        if (current==null) {
             	            current = createModelElementForParent(grammarAccess.getSimpleFiniteStateMachineRule());
             	        }
-                   		set(
+                   		add(
                    			current, 
-                   			"initialState",
-                    		lv_initialState_4_0, 
+                   			"states",
+                    		lv_states_4_0, 
                     		"State");
             	        afterParserOrEnumRuleCall();
             	    
@@ -491,7 +491,7 @@ public class InternalSfsmParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleTransition"
-    // ../be.kuleuven.learning.simplefsm.dsl/src-gen/be/kuleuven/learning/simplefsm/parser/antlr/internal/InternalSfsm.g:244:1: ruleTransition returns [EObject current=null] : (otherlv_0= 'event' ( (lv_event_1_0= RULE_STRING ) ) otherlv_2= 'gotos' ( (otherlv_3= RULE_ID ) ) ) ;
+    // ../be.kuleuven.learning.simplefsm.dsl/src-gen/be/kuleuven/learning/simplefsm/parser/antlr/internal/InternalSfsm.g:244:1: ruleTransition returns [EObject current=null] : (otherlv_0= 'event' ( (lv_event_1_0= RULE_STRING ) ) otherlv_2= 'goto' ( (otherlv_3= RULE_ID ) ) ) ;
     public final EObject ruleTransition() throws RecognitionException {
         EObject current = null;
 
@@ -503,11 +503,11 @@ public class InternalSfsmParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../be.kuleuven.learning.simplefsm.dsl/src-gen/be/kuleuven/learning/simplefsm/parser/antlr/internal/InternalSfsm.g:247:28: ( (otherlv_0= 'event' ( (lv_event_1_0= RULE_STRING ) ) otherlv_2= 'gotos' ( (otherlv_3= RULE_ID ) ) ) )
-            // ../be.kuleuven.learning.simplefsm.dsl/src-gen/be/kuleuven/learning/simplefsm/parser/antlr/internal/InternalSfsm.g:248:1: (otherlv_0= 'event' ( (lv_event_1_0= RULE_STRING ) ) otherlv_2= 'gotos' ( (otherlv_3= RULE_ID ) ) )
+            // ../be.kuleuven.learning.simplefsm.dsl/src-gen/be/kuleuven/learning/simplefsm/parser/antlr/internal/InternalSfsm.g:247:28: ( (otherlv_0= 'event' ( (lv_event_1_0= RULE_STRING ) ) otherlv_2= 'goto' ( (otherlv_3= RULE_ID ) ) ) )
+            // ../be.kuleuven.learning.simplefsm.dsl/src-gen/be/kuleuven/learning/simplefsm/parser/antlr/internal/InternalSfsm.g:248:1: (otherlv_0= 'event' ( (lv_event_1_0= RULE_STRING ) ) otherlv_2= 'goto' ( (otherlv_3= RULE_ID ) ) )
             {
-            // ../be.kuleuven.learning.simplefsm.dsl/src-gen/be/kuleuven/learning/simplefsm/parser/antlr/internal/InternalSfsm.g:248:1: (otherlv_0= 'event' ( (lv_event_1_0= RULE_STRING ) ) otherlv_2= 'gotos' ( (otherlv_3= RULE_ID ) ) )
-            // ../be.kuleuven.learning.simplefsm.dsl/src-gen/be/kuleuven/learning/simplefsm/parser/antlr/internal/InternalSfsm.g:248:3: otherlv_0= 'event' ( (lv_event_1_0= RULE_STRING ) ) otherlv_2= 'gotos' ( (otherlv_3= RULE_ID ) )
+            // ../be.kuleuven.learning.simplefsm.dsl/src-gen/be/kuleuven/learning/simplefsm/parser/antlr/internal/InternalSfsm.g:248:1: (otherlv_0= 'event' ( (lv_event_1_0= RULE_STRING ) ) otherlv_2= 'goto' ( (otherlv_3= RULE_ID ) ) )
+            // ../be.kuleuven.learning.simplefsm.dsl/src-gen/be/kuleuven/learning/simplefsm/parser/antlr/internal/InternalSfsm.g:248:3: otherlv_0= 'event' ( (lv_event_1_0= RULE_STRING ) ) otherlv_2= 'goto' ( (otherlv_3= RULE_ID ) )
             {
             otherlv_0=(Token)match(input,17,FOLLOW_17_in_ruleTransition479); 
 
@@ -541,7 +541,7 @@ public class InternalSfsmParser extends AbstractInternalAntlrParser {
 
             otherlv_2=(Token)match(input,18,FOLLOW_18_in_ruleTransition513); 
 
-                	newLeafNode(otherlv_2, grammarAccess.getTransitionAccess().getGotosKeyword_2());
+                	newLeafNode(otherlv_2, grammarAccess.getTransitionAccess().getGotoKeyword_2());
                 
             // ../be.kuleuven.learning.simplefsm.dsl/src-gen/be/kuleuven/learning/simplefsm/parser/antlr/internal/InternalSfsm.g:274:1: ( (otherlv_3= RULE_ID ) )
             // ../be.kuleuven.learning.simplefsm.dsl/src-gen/be/kuleuven/learning/simplefsm/parser/antlr/internal/InternalSfsm.g:275:1: (otherlv_3= RULE_ID )

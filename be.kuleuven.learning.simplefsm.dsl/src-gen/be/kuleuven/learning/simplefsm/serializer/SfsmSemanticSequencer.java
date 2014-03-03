@@ -48,7 +48,7 @@ public class SfsmSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	
 	/**
 	 * Constraint:
-	 *     (name=ID initialState=State states+=State*)
+	 *     (name=ID states+=State states+=State*)
 	 */
 	protected void sequence_SimpleFiniteStateMachine(EObject context, SimpleFiniteStateMachine semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);

@@ -15,7 +15,6 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * <ul>
  *   <li>{@link be.kuleuven.learning.simplefsm.SimpleFiniteStateMachine#getName <em>Name</em>}</li>
- *   <li>{@link be.kuleuven.learning.simplefsm.SimpleFiniteStateMachine#getInitialState <em>Initial State</em>}</li>
  *   <li>{@link be.kuleuven.learning.simplefsm.SimpleFiniteStateMachine#getStates <em>States</em>}</li>
  * </ul>
  * </p>
@@ -53,34 +52,9 @@ public interface SimpleFiniteStateMachine extends EObject
   void setName(String value);
 
   /**
-   * Returns the value of the '<em><b>Initial State</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <p>
-   * If the meaning of the '<em>Initial State</em>' containment reference isn't clear,
-   * there really should be more of a description here...
-   * </p>
-   * <!-- end-user-doc -->
-   * @return the value of the '<em>Initial State</em>' containment reference.
-   * @see #setInitialState(State)
-   * @see be.kuleuven.learning.simplefsm.SimplefsmPackage#getSimpleFiniteStateMachine_InitialState()
-   * @model containment="true"
-   * @generated
-   */
-  State getInitialState();
-
-  /**
-   * Sets the value of the '{@link be.kuleuven.learning.simplefsm.SimpleFiniteStateMachine#getInitialState <em>Initial State</em>}' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Initial State</em>' containment reference.
-   * @see #getInitialState()
-   * @generated
-   */
-  void setInitialState(State value);
-
-  /**
    * Returns the value of the '<em><b>States</b></em>' containment reference list.
    * The list contents are of type {@link be.kuleuven.learning.simplefsm.State}.
+   * It is bidirectional and its opposite is '{@link be.kuleuven.learning.simplefsm.State#getOwningFSM <em>Owning FSM</em>}'.
    * <!-- begin-user-doc -->
    * <p>
    * If the meaning of the '<em>States</em>' containment reference list isn't clear,
@@ -89,7 +63,8 @@ public interface SimpleFiniteStateMachine extends EObject
    * <!-- end-user-doc -->
    * @return the value of the '<em>States</em>' containment reference list.
    * @see be.kuleuven.learning.simplefsm.SimplefsmPackage#getSimpleFiniteStateMachine_States()
-   * @model containment="true"
+   * @see be.kuleuven.learning.simplefsm.State#getOwningFSM
+   * @model opposite="owningFSM" containment="true"
    * @generated
    */
   EList<State> getStates();

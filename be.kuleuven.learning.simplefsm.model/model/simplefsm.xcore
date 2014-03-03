@@ -3,25 +3,26 @@ package be.kuleuven.learning.simplefsm
 class SimpleFiniteStateMachine 
 {
 	String name
-	contains State initialState
-	contains State[] states// opposite owningFSM
-	//contains Transition[] ownedTransitions opposite owningFSM
-	//contains State[1..*] finalStates //states with outgoingTransitions.size() == 0
+	contains State[] states opposite owningFSM
+	//contains Transition[] transitions opposite owningFSM
+	//contains State initialState
+	//contains State[1..*] finalStates
 }
 
 class State 
 {
 	String name
 	String action
-	contains Transition[] outgoingTransitions opposite source
+	contains Transition[] outgoingTransitions// opposite source
 	//refers Transition[] incomingTransitions opposite target
-	//container SimpleFiniteStateMachine owningFSM opposite ownedStates
+	container SimpleFiniteStateMachine owningFSM opposite states
 }
 
 class Transition
 {
+	String name
 	refers State target// opposite incomingTransitions
-	container State source opposite outgoingTransitions
-	//container SimpleFiniteStateMachine owningFSM opposite ownedTransitions	
+	//refers State source opposite outgoingTransitions
+	//container SimpleFiniteStateMachine owningFSM opposite transitions	
 	String event
 }

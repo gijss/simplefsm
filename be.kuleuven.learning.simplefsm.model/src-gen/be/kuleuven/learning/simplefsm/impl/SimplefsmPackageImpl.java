@@ -136,19 +136,9 @@ public class SimplefsmPackageImpl extends EPackageImpl implements SimplefsmPacka
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getSimpleFiniteStateMachine_InitialState()
-  {
-    return (EReference)simpleFiniteStateMachineEClass.getEStructuralFeatures().get(1);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
   public EReference getSimpleFiniteStateMachine_States()
   {
-    return (EReference)simpleFiniteStateMachineEClass.getEStructuralFeatures().get(2);
+    return (EReference)simpleFiniteStateMachineEClass.getEStructuralFeatures().get(1);
   }
 
   /**
@@ -196,6 +186,16 @@ public class SimplefsmPackageImpl extends EPackageImpl implements SimplefsmPacka
    * <!-- end-user-doc -->
    * @generated
    */
+  public EReference getState_OwningFSM()
+  {
+    return (EReference)stateEClass.getEStructuralFeatures().get(3);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public EClass getTransition()
   {
     return transitionEClass;
@@ -206,9 +206,9 @@ public class SimplefsmPackageImpl extends EPackageImpl implements SimplefsmPacka
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getTransition_Target()
+  public EAttribute getTransition_Name()
   {
-    return (EReference)transitionEClass.getEStructuralFeatures().get(0);
+    return (EAttribute)transitionEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -216,7 +216,7 @@ public class SimplefsmPackageImpl extends EPackageImpl implements SimplefsmPacka
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getTransition_Source()
+  public EReference getTransition_Target()
   {
     return (EReference)transitionEClass.getEStructuralFeatures().get(1);
   }
@@ -263,17 +263,17 @@ public class SimplefsmPackageImpl extends EPackageImpl implements SimplefsmPacka
     // Create classes and their features
     simpleFiniteStateMachineEClass = createEClass(SIMPLE_FINITE_STATE_MACHINE);
     createEAttribute(simpleFiniteStateMachineEClass, SIMPLE_FINITE_STATE_MACHINE__NAME);
-    createEReference(simpleFiniteStateMachineEClass, SIMPLE_FINITE_STATE_MACHINE__INITIAL_STATE);
     createEReference(simpleFiniteStateMachineEClass, SIMPLE_FINITE_STATE_MACHINE__STATES);
 
     stateEClass = createEClass(STATE);
     createEAttribute(stateEClass, STATE__NAME);
     createEAttribute(stateEClass, STATE__ACTION);
     createEReference(stateEClass, STATE__OUTGOING_TRANSITIONS);
+    createEReference(stateEClass, STATE__OWNING_FSM);
 
     transitionEClass = createEClass(TRANSITION);
+    createEAttribute(transitionEClass, TRANSITION__NAME);
     createEReference(transitionEClass, TRANSITION__TARGET);
-    createEReference(transitionEClass, TRANSITION__SOURCE);
     createEAttribute(transitionEClass, TRANSITION__EVENT);
   }
 
@@ -313,17 +313,17 @@ public class SimplefsmPackageImpl extends EPackageImpl implements SimplefsmPacka
     // Initialize classes, features, and operations; add parameters
     initEClass(simpleFiniteStateMachineEClass, SimpleFiniteStateMachine.class, "SimpleFiniteStateMachine", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getSimpleFiniteStateMachine_Name(), theEcorePackage.getEString(), "name", null, 0, 1, SimpleFiniteStateMachine.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getSimpleFiniteStateMachine_InitialState(), this.getState(), null, "initialState", null, 0, 1, SimpleFiniteStateMachine.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getSimpleFiniteStateMachine_States(), this.getState(), null, "states", null, 0, -1, SimpleFiniteStateMachine.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getSimpleFiniteStateMachine_States(), this.getState(), this.getState_OwningFSM(), "states", null, 0, -1, SimpleFiniteStateMachine.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(stateEClass, State.class, "State", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getState_Name(), theEcorePackage.getEString(), "name", null, 0, 1, State.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getState_Action(), theEcorePackage.getEString(), "action", null, 0, 1, State.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getState_OutgoingTransitions(), this.getTransition(), this.getTransition_Source(), "outgoingTransitions", null, 0, -1, State.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getState_OutgoingTransitions(), this.getTransition(), null, "outgoingTransitions", null, 0, -1, State.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getState_OwningFSM(), this.getSimpleFiniteStateMachine(), this.getSimpleFiniteStateMachine_States(), "owningFSM", null, 0, 1, State.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(transitionEClass, Transition.class, "Transition", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getTransition_Name(), theEcorePackage.getEString(), "name", null, 0, 1, Transition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getTransition_Target(), this.getState(), null, "target", null, 0, 1, Transition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getTransition_Source(), this.getState(), this.getState_OutgoingTransitions(), "source", null, 0, 1, Transition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getTransition_Event(), theEcorePackage.getEString(), "event", null, 0, 1, Transition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     // Create resource

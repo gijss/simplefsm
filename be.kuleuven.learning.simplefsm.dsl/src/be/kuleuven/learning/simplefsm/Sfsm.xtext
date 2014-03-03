@@ -6,7 +6,7 @@ import "be.kuleuven.learning.simplefsm"
 SimpleFiniteStateMachine:
 	'sfsm' name=ID
 	'{'
-		'initial' initialState = State
+		'initial' states += State
 		(states += State)*
 	'}'
 ;

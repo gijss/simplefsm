@@ -26,17 +26,17 @@ public class SfsmGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cNameIDTerminalRuleCall_1_0 = (RuleCall)cNameAssignment_1.eContents().get(0);
 		private final Keyword cLeftCurlyBracketKeyword_2 = (Keyword)cGroup.eContents().get(2);
 		private final Keyword cInitialKeyword_3 = (Keyword)cGroup.eContents().get(3);
-		private final Assignment cInitialStateAssignment_4 = (Assignment)cGroup.eContents().get(4);
-		private final RuleCall cInitialStateStateParserRuleCall_4_0 = (RuleCall)cInitialStateAssignment_4.eContents().get(0);
+		private final Assignment cStatesAssignment_4 = (Assignment)cGroup.eContents().get(4);
+		private final RuleCall cStatesStateParserRuleCall_4_0 = (RuleCall)cStatesAssignment_4.eContents().get(0);
 		private final Assignment cStatesAssignment_5 = (Assignment)cGroup.eContents().get(5);
 		private final RuleCall cStatesStateParserRuleCall_5_0 = (RuleCall)cStatesAssignment_5.eContents().get(0);
 		private final Keyword cRightCurlyBracketKeyword_6 = (Keyword)cGroup.eContents().get(6);
 		
 		//SimpleFiniteStateMachine:
-		//	"sfsm" name=ID "{" "initial" initialState=State states+=State* "}";
+		//	"sfsm" name=ID "{" "initial" states+=State states+=State* "}";
 		public ParserRule getRule() { return rule; }
 
-		//"sfsm" name=ID "{" "initial" initialState=State states+=State* "}"
+		//"sfsm" name=ID "{" "initial" states+=State states+=State* "}"
 		public Group getGroup() { return cGroup; }
 
 		//"sfsm"
@@ -54,11 +54,11 @@ public class SfsmGrammarAccess extends AbstractGrammarElementFinder {
 		//"initial"
 		public Keyword getInitialKeyword_3() { return cInitialKeyword_3; }
 
-		//initialState=State
-		public Assignment getInitialStateAssignment_4() { return cInitialStateAssignment_4; }
+		//states+=State
+		public Assignment getStatesAssignment_4() { return cStatesAssignment_4; }
 
 		//State
-		public RuleCall getInitialStateStateParserRuleCall_4_0() { return cInitialStateStateParserRuleCall_4_0; }
+		public RuleCall getStatesStateParserRuleCall_4_0() { return cStatesStateParserRuleCall_4_0; }
 
 		//states+=State*
 		public Assignment getStatesAssignment_5() { return cStatesAssignment_5; }
@@ -124,16 +124,16 @@ public class SfsmGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cEventKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final Assignment cEventAssignment_1 = (Assignment)cGroup.eContents().get(1);
 		private final RuleCall cEventSTRINGTerminalRuleCall_1_0 = (RuleCall)cEventAssignment_1.eContents().get(0);
-		private final Keyword cGotosKeyword_2 = (Keyword)cGroup.eContents().get(2);
+		private final Keyword cGotoKeyword_2 = (Keyword)cGroup.eContents().get(2);
 		private final Assignment cTargetAssignment_3 = (Assignment)cGroup.eContents().get(3);
 		private final CrossReference cTargetStateCrossReference_3_0 = (CrossReference)cTargetAssignment_3.eContents().get(0);
 		private final RuleCall cTargetStateIDTerminalRuleCall_3_0_1 = (RuleCall)cTargetStateCrossReference_3_0.eContents().get(1);
 		
 		//Transition:
-		//	"event" event=STRING "gotos" target=[State];
+		//	"event" event=STRING "goto" target=[State];
 		public ParserRule getRule() { return rule; }
 
-		//"event" event=STRING "gotos" target=[State]
+		//"event" event=STRING "goto" target=[State]
 		public Group getGroup() { return cGroup; }
 
 		//"event"
@@ -145,8 +145,8 @@ public class SfsmGrammarAccess extends AbstractGrammarElementFinder {
 		//STRING
 		public RuleCall getEventSTRINGTerminalRuleCall_1_0() { return cEventSTRINGTerminalRuleCall_1_0; }
 
-		//"gotos"
-		public Keyword getGotosKeyword_2() { return cGotosKeyword_2; }
+		//"goto"
+		public Keyword getGotoKeyword_2() { return cGotoKeyword_2; }
 
 		//target=[State]
 		public Assignment getTargetAssignment_3() { return cTargetAssignment_3; }
@@ -202,7 +202,7 @@ public class SfsmGrammarAccess extends AbstractGrammarElementFinder {
 
 	
 	//SimpleFiniteStateMachine:
-	//	"sfsm" name=ID "{" "initial" initialState=State states+=State* "}";
+	//	"sfsm" name=ID "{" "initial" states+=State states+=State* "}";
 	public SimpleFiniteStateMachineElements getSimpleFiniteStateMachineAccess() {
 		return (pSimpleFiniteStateMachine != null) ? pSimpleFiniteStateMachine : (pSimpleFiniteStateMachine = new SimpleFiniteStateMachineElements());
 	}
@@ -222,7 +222,7 @@ public class SfsmGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//Transition:
-	//	"event" event=STRING "gotos" target=[State];
+	//	"event" event=STRING "goto" target=[State];
 	public TransitionElements getTransitionAccess() {
 		return (pTransition != null) ? pTransition : (pTransition = new TransitionElements());
 	}

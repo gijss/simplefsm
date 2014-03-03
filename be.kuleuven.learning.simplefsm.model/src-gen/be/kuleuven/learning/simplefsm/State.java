@@ -17,6 +17,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link be.kuleuven.learning.simplefsm.State#getName <em>Name</em>}</li>
  *   <li>{@link be.kuleuven.learning.simplefsm.State#getAction <em>Action</em>}</li>
  *   <li>{@link be.kuleuven.learning.simplefsm.State#getOutgoingTransitions <em>Outgoing Transitions</em>}</li>
+ *   <li>{@link be.kuleuven.learning.simplefsm.State#getOwningFSM <em>Owning FSM</em>}</li>
  * </ul>
  * </p>
  *
@@ -81,7 +82,6 @@ public interface State extends EObject
   /**
    * Returns the value of the '<em><b>Outgoing Transitions</b></em>' containment reference list.
    * The list contents are of type {@link be.kuleuven.learning.simplefsm.Transition}.
-   * It is bidirectional and its opposite is '{@link be.kuleuven.learning.simplefsm.Transition#getSource <em>Source</em>}'.
    * <!-- begin-user-doc -->
    * <p>
    * If the meaning of the '<em>Outgoing Transitions</em>' containment reference list isn't clear,
@@ -90,10 +90,37 @@ public interface State extends EObject
    * <!-- end-user-doc -->
    * @return the value of the '<em>Outgoing Transitions</em>' containment reference list.
    * @see be.kuleuven.learning.simplefsm.SimplefsmPackage#getState_OutgoingTransitions()
-   * @see be.kuleuven.learning.simplefsm.Transition#getSource
-   * @model opposite="source" containment="true"
+   * @model containment="true"
    * @generated
    */
   EList<Transition> getOutgoingTransitions();
+
+  /**
+   * Returns the value of the '<em><b>Owning FSM</b></em>' container reference.
+   * It is bidirectional and its opposite is '{@link be.kuleuven.learning.simplefsm.SimpleFiniteStateMachine#getStates <em>States</em>}'.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Owning FSM</em>' container reference isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Owning FSM</em>' container reference.
+   * @see #setOwningFSM(SimpleFiniteStateMachine)
+   * @see be.kuleuven.learning.simplefsm.SimplefsmPackage#getState_OwningFSM()
+   * @see be.kuleuven.learning.simplefsm.SimpleFiniteStateMachine#getStates
+   * @model opposite="states" transient="false"
+   * @generated
+   */
+  SimpleFiniteStateMachine getOwningFSM();
+
+  /**
+   * Sets the value of the '{@link be.kuleuven.learning.simplefsm.State#getOwningFSM <em>Owning FSM</em>}' container reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Owning FSM</em>' container reference.
+   * @see #getOwningFSM()
+   * @generated
+   */
+  void setOwningFSM(SimpleFiniteStateMachine value);
 
 } // State

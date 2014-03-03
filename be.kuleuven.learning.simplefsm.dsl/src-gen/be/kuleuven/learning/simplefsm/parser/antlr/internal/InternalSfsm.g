@@ -110,16 +110,16 @@ ruleSimpleFiniteStateMachine returns [EObject current=null]
 (
 (
 		{ 
-	        newCompositeNode(grammarAccess.getSimpleFiniteStateMachineAccess().getInitialStateStateParserRuleCall_4_0()); 
+	        newCompositeNode(grammarAccess.getSimpleFiniteStateMachineAccess().getStatesStateParserRuleCall_4_0()); 
 	    }
-		lv_initialState_4_0=ruleState		{
+		lv_states_4_0=ruleState		{
 	        if ($current==null) {
 	            $current = createModelElementForParent(grammarAccess.getSimpleFiniteStateMachineRule());
 	        }
-       		set(
+       		add(
        			$current, 
-       			"initialState",
-        		lv_initialState_4_0, 
+       			"states",
+        		lv_states_4_0, 
         		"State");
 	        afterParserOrEnumRuleCall();
 	    }
@@ -267,9 +267,9 @@ ruleTransition returns [EObject current=null]
 	    }
 
 )
-)	otherlv_2='gotos' 
+)	otherlv_2='goto' 
     {
-    	newLeafNode(otherlv_2, grammarAccess.getTransitionAccess().getGotosKeyword_2());
+    	newLeafNode(otherlv_2, grammarAccess.getTransitionAccess().getGotoKeyword_2());
     }
 (
 (

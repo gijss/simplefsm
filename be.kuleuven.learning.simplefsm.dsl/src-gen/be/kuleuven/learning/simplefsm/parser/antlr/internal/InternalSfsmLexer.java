@@ -192,10 +192,10 @@ public class InternalSfsmLexer extends Lexer {
         try {
             int _type = T__18;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../be.kuleuven.learning.simplefsm.dsl/src-gen/be/kuleuven/learning/simplefsm/parser/antlr/internal/InternalSfsm.g:18:7: ( 'gotos' )
-            // ../be.kuleuven.learning.simplefsm.dsl/src-gen/be/kuleuven/learning/simplefsm/parser/antlr/internal/InternalSfsm.g:18:9: 'gotos'
+            // ../be.kuleuven.learning.simplefsm.dsl/src-gen/be/kuleuven/learning/simplefsm/parser/antlr/internal/InternalSfsm.g:18:7: ( 'goto' )
+            // ../be.kuleuven.learning.simplefsm.dsl/src-gen/be/kuleuven/learning/simplefsm/parser/antlr/internal/InternalSfsm.g:18:9: 'goto'
             {
-            match("gotos"); 
+            match("goto"); 
 
 
             }
@@ -841,28 +841,28 @@ public class InternalSfsmLexer extends Lexer {
     protected DFA12 dfa12 = new DFA12(this);
     static final String DFA12_eotS =
         "\1\uffff\1\22\1\uffff\1\22\1\uffff\3\22\1\17\2\uffff\3\17\2\uffff"+
-        "\2\22\2\uffff\1\22\1\uffff\3\22\5\uffff\6\22\1\52\5\22\1\uffff\1"+
-        "\60\2\22\1\63\1\64\1\uffff\1\22\1\66\2\uffff\1\67\2\uffff";
+        "\2\22\2\uffff\1\22\1\uffff\3\22\5\uffff\6\22\1\52\4\22\1\57\1\uffff"+
+        "\1\60\2\22\1\63\2\uffff\1\22\1\65\1\uffff\1\66\2\uffff";
     static final String DFA12_eofS =
-        "\70\uffff";
+        "\67\uffff";
     static final String DFA12_minS =
         "\1\0\1\146\1\uffff\1\156\1\uffff\1\143\1\166\1\157\1\101\2\uffff"+
         "\2\0\1\52\2\uffff\1\163\1\141\2\uffff\1\151\1\uffff\1\164\1\145"+
         "\1\164\5\uffff\1\155\2\164\1\151\1\156\1\157\1\60\1\145\1\151\1"+
-        "\157\1\164\1\163\1\uffff\1\60\1\141\1\156\2\60\1\uffff\1\154\1\60"+
-        "\2\uffff\1\60\2\uffff";
+        "\157\1\164\1\60\1\uffff\1\60\1\141\1\156\1\60\2\uffff\1\154\1\60"+
+        "\1\uffff\1\60\2\uffff";
     static final String DFA12_maxS =
         "\1\uffff\1\164\1\uffff\1\156\1\uffff\1\143\1\166\1\157\1\172\2\uffff"+
         "\2\uffff\1\57\2\uffff\1\163\1\141\2\uffff\1\151\1\uffff\1\164\1"+
         "\145\1\164\5\uffff\1\155\2\164\1\151\1\156\1\157\1\172\1\145\1\151"+
-        "\1\157\1\164\1\163\1\uffff\1\172\1\141\1\156\2\172\1\uffff\1\154"+
-        "\1\172\2\uffff\1\172\2\uffff";
+        "\1\157\1\164\1\172\1\uffff\1\172\1\141\1\156\1\172\2\uffff\1\154"+
+        "\1\172\1\uffff\1\172\2\uffff";
     static final String DFA12_acceptS =
         "\2\uffff\1\2\1\uffff\1\4\4\uffff\1\11\1\12\3\uffff\1\16\1\17\2\uffff"+
         "\1\11\1\2\1\uffff\1\4\3\uffff\1\12\1\13\1\14\1\15\1\16\14\uffff"+
-        "\1\1\5\uffff\1\5\2\uffff\1\7\1\10\1\uffff\1\6\1\3";
+        "\1\1\4\uffff\1\10\1\5\2\uffff\1\7\1\uffff\1\6\1\3";
     static final String DFA12_specialS =
-        "\1\1\12\uffff\1\0\1\2\53\uffff}>";
+        "\1\2\12\uffff\1\1\1\0\52\uffff}>";
     static final String[] DFA12_transitionS = {
             "\11\17\2\16\2\17\1\16\22\17\1\16\1\17\1\13\4\17\1\14\7\17\1"+
             "\15\12\12\7\17\32\11\3\17\1\10\1\11\1\17\1\5\3\11\1\6\1\11\1"+
@@ -907,17 +907,16 @@ public class InternalSfsmLexer extends Lexer {
             "\1\54",
             "\1\55",
             "\1\56",
-            "\1\57",
+            "\12\22\7\uffff\32\22\4\uffff\1\22\1\uffff\32\22",
             "",
             "\12\22\7\uffff\32\22\4\uffff\1\22\1\uffff\32\22",
             "\1\61",
             "\1\62",
             "\12\22\7\uffff\32\22\4\uffff\1\22\1\uffff\32\22",
-            "\12\22\7\uffff\32\22\4\uffff\1\22\1\uffff\32\22",
             "",
-            "\1\65",
-            "\12\22\7\uffff\32\22\4\uffff\1\22\1\uffff\32\22",
             "",
+            "\1\64",
+            "\12\22\7\uffff\32\22\4\uffff\1\22\1\uffff\32\22",
             "",
             "\12\22\7\uffff\32\22\4\uffff\1\22\1\uffff\32\22",
             "",
@@ -961,6 +960,16 @@ public class InternalSfsmLexer extends Lexer {
         	int _s = s;
             switch ( s ) {
                     case 0 : 
+                        int LA12_12 = input.LA(1);
+
+                        s = -1;
+                        if ( ((LA12_12>='\u0000' && LA12_12<='\uFFFF')) ) {s = 26;}
+
+                        else s = 15;
+
+                        if ( s>=0 ) return s;
+                        break;
+                    case 1 : 
                         int LA12_11 = input.LA(1);
 
                         s = -1;
@@ -970,7 +979,7 @@ public class InternalSfsmLexer extends Lexer {
 
                         if ( s>=0 ) return s;
                         break;
-                    case 1 : 
+                    case 2 : 
                         int LA12_0 = input.LA(1);
 
                         s = -1;
@@ -1003,16 +1012,6 @@ public class InternalSfsmLexer extends Lexer {
                         else if ( ((LA12_0>='\t' && LA12_0<='\n')||LA12_0=='\r'||LA12_0==' ') ) {s = 14;}
 
                         else if ( ((LA12_0>='\u0000' && LA12_0<='\b')||(LA12_0>='\u000B' && LA12_0<='\f')||(LA12_0>='\u000E' && LA12_0<='\u001F')||LA12_0=='!'||(LA12_0>='#' && LA12_0<='&')||(LA12_0>='(' && LA12_0<='.')||(LA12_0>=':' && LA12_0<='@')||(LA12_0>='[' && LA12_0<=']')||LA12_0=='`'||LA12_0=='|'||(LA12_0>='~' && LA12_0<='\uFFFF')) ) {s = 15;}
-
-                        if ( s>=0 ) return s;
-                        break;
-                    case 2 : 
-                        int LA12_12 = input.LA(1);
-
-                        s = -1;
-                        if ( ((LA12_12>='\u0000' && LA12_12<='\uFFFF')) ) {s = 26;}
-
-                        else s = 15;
 
                         if ( s>=0 ) return s;
                         break;

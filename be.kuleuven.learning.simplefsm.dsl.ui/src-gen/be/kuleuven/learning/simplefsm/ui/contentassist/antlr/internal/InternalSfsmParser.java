@@ -22,7 +22,7 @@ import java.util.ArrayList;
 @SuppressWarnings("all")
 public class InternalSfsmParser extends AbstractInternalContentAssistParser {
     public static final String[] tokenNames = new String[] {
-        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_STRING", "RULE_ID", "RULE_INT", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'sfsm'", "'{'", "'initial'", "'}'", "'state'", "'action'", "'event'", "'gotos'"
+        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_STRING", "RULE_ID", "RULE_INT", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'sfsm'", "'{'", "'initial'", "'}'", "'state'", "'action'", "'event'", "'goto'"
     };
     public static final int RULE_ID=5;
     public static final int RULE_STRING=4;
@@ -658,31 +658,31 @@ public class InternalSfsmParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__SimpleFiniteStateMachine__Group__4__Impl"
-    // ../be.kuleuven.learning.simplefsm.dsl.ui/src-gen/be/kuleuven/learning/simplefsm/ui/contentassist/antlr/internal/InternalSfsm.g:280:1: rule__SimpleFiniteStateMachine__Group__4__Impl : ( ( rule__SimpleFiniteStateMachine__InitialStateAssignment_4 ) ) ;
+    // ../be.kuleuven.learning.simplefsm.dsl.ui/src-gen/be/kuleuven/learning/simplefsm/ui/contentassist/antlr/internal/InternalSfsm.g:280:1: rule__SimpleFiniteStateMachine__Group__4__Impl : ( ( rule__SimpleFiniteStateMachine__StatesAssignment_4 ) ) ;
     public final void rule__SimpleFiniteStateMachine__Group__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../be.kuleuven.learning.simplefsm.dsl.ui/src-gen/be/kuleuven/learning/simplefsm/ui/contentassist/antlr/internal/InternalSfsm.g:284:1: ( ( ( rule__SimpleFiniteStateMachine__InitialStateAssignment_4 ) ) )
-            // ../be.kuleuven.learning.simplefsm.dsl.ui/src-gen/be/kuleuven/learning/simplefsm/ui/contentassist/antlr/internal/InternalSfsm.g:285:1: ( ( rule__SimpleFiniteStateMachine__InitialStateAssignment_4 ) )
+            // ../be.kuleuven.learning.simplefsm.dsl.ui/src-gen/be/kuleuven/learning/simplefsm/ui/contentassist/antlr/internal/InternalSfsm.g:284:1: ( ( ( rule__SimpleFiniteStateMachine__StatesAssignment_4 ) ) )
+            // ../be.kuleuven.learning.simplefsm.dsl.ui/src-gen/be/kuleuven/learning/simplefsm/ui/contentassist/antlr/internal/InternalSfsm.g:285:1: ( ( rule__SimpleFiniteStateMachine__StatesAssignment_4 ) )
             {
-            // ../be.kuleuven.learning.simplefsm.dsl.ui/src-gen/be/kuleuven/learning/simplefsm/ui/contentassist/antlr/internal/InternalSfsm.g:285:1: ( ( rule__SimpleFiniteStateMachine__InitialStateAssignment_4 ) )
-            // ../be.kuleuven.learning.simplefsm.dsl.ui/src-gen/be/kuleuven/learning/simplefsm/ui/contentassist/antlr/internal/InternalSfsm.g:286:1: ( rule__SimpleFiniteStateMachine__InitialStateAssignment_4 )
+            // ../be.kuleuven.learning.simplefsm.dsl.ui/src-gen/be/kuleuven/learning/simplefsm/ui/contentassist/antlr/internal/InternalSfsm.g:285:1: ( ( rule__SimpleFiniteStateMachine__StatesAssignment_4 ) )
+            // ../be.kuleuven.learning.simplefsm.dsl.ui/src-gen/be/kuleuven/learning/simplefsm/ui/contentassist/antlr/internal/InternalSfsm.g:286:1: ( rule__SimpleFiniteStateMachine__StatesAssignment_4 )
             {
-             before(grammarAccess.getSimpleFiniteStateMachineAccess().getInitialStateAssignment_4()); 
-            // ../be.kuleuven.learning.simplefsm.dsl.ui/src-gen/be/kuleuven/learning/simplefsm/ui/contentassist/antlr/internal/InternalSfsm.g:287:1: ( rule__SimpleFiniteStateMachine__InitialStateAssignment_4 )
-            // ../be.kuleuven.learning.simplefsm.dsl.ui/src-gen/be/kuleuven/learning/simplefsm/ui/contentassist/antlr/internal/InternalSfsm.g:287:2: rule__SimpleFiniteStateMachine__InitialStateAssignment_4
+             before(grammarAccess.getSimpleFiniteStateMachineAccess().getStatesAssignment_4()); 
+            // ../be.kuleuven.learning.simplefsm.dsl.ui/src-gen/be/kuleuven/learning/simplefsm/ui/contentassist/antlr/internal/InternalSfsm.g:287:1: ( rule__SimpleFiniteStateMachine__StatesAssignment_4 )
+            // ../be.kuleuven.learning.simplefsm.dsl.ui/src-gen/be/kuleuven/learning/simplefsm/ui/contentassist/antlr/internal/InternalSfsm.g:287:2: rule__SimpleFiniteStateMachine__StatesAssignment_4
             {
-            pushFollow(FOLLOW_rule__SimpleFiniteStateMachine__InitialStateAssignment_4_in_rule__SimpleFiniteStateMachine__Group__4__Impl524);
-            rule__SimpleFiniteStateMachine__InitialStateAssignment_4();
+            pushFollow(FOLLOW_rule__SimpleFiniteStateMachine__StatesAssignment_4_in_rule__SimpleFiniteStateMachine__Group__4__Impl524);
+            rule__SimpleFiniteStateMachine__StatesAssignment_4();
 
             state._fsp--;
 
 
             }
 
-             after(grammarAccess.getSimpleFiniteStateMachineAccess().getInitialStateAssignment_4()); 
+             after(grammarAccess.getSimpleFiniteStateMachineAccess().getStatesAssignment_4()); 
 
             }
 
@@ -1634,21 +1634,21 @@ public class InternalSfsmParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Transition__Group__2__Impl"
-    // ../be.kuleuven.learning.simplefsm.dsl.ui/src-gen/be/kuleuven/learning/simplefsm/ui/contentassist/antlr/internal/InternalSfsm.g:666:1: rule__Transition__Group__2__Impl : ( 'gotos' ) ;
+    // ../be.kuleuven.learning.simplefsm.dsl.ui/src-gen/be/kuleuven/learning/simplefsm/ui/contentassist/antlr/internal/InternalSfsm.g:666:1: rule__Transition__Group__2__Impl : ( 'goto' ) ;
     public final void rule__Transition__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../be.kuleuven.learning.simplefsm.dsl.ui/src-gen/be/kuleuven/learning/simplefsm/ui/contentassist/antlr/internal/InternalSfsm.g:670:1: ( ( 'gotos' ) )
-            // ../be.kuleuven.learning.simplefsm.dsl.ui/src-gen/be/kuleuven/learning/simplefsm/ui/contentassist/antlr/internal/InternalSfsm.g:671:1: ( 'gotos' )
+            // ../be.kuleuven.learning.simplefsm.dsl.ui/src-gen/be/kuleuven/learning/simplefsm/ui/contentassist/antlr/internal/InternalSfsm.g:670:1: ( ( 'goto' ) )
+            // ../be.kuleuven.learning.simplefsm.dsl.ui/src-gen/be/kuleuven/learning/simplefsm/ui/contentassist/antlr/internal/InternalSfsm.g:671:1: ( 'goto' )
             {
-            // ../be.kuleuven.learning.simplefsm.dsl.ui/src-gen/be/kuleuven/learning/simplefsm/ui/contentassist/antlr/internal/InternalSfsm.g:671:1: ( 'gotos' )
-            // ../be.kuleuven.learning.simplefsm.dsl.ui/src-gen/be/kuleuven/learning/simplefsm/ui/contentassist/antlr/internal/InternalSfsm.g:672:1: 'gotos'
+            // ../be.kuleuven.learning.simplefsm.dsl.ui/src-gen/be/kuleuven/learning/simplefsm/ui/contentassist/antlr/internal/InternalSfsm.g:671:1: ( 'goto' )
+            // ../be.kuleuven.learning.simplefsm.dsl.ui/src-gen/be/kuleuven/learning/simplefsm/ui/contentassist/antlr/internal/InternalSfsm.g:672:1: 'goto'
             {
-             before(grammarAccess.getTransitionAccess().getGotosKeyword_2()); 
+             before(grammarAccess.getTransitionAccess().getGotoKeyword_2()); 
             match(input,18,FOLLOW_18_in_rule__Transition__Group__2__Impl1280); 
-             after(grammarAccess.getTransitionAccess().getGotosKeyword_2()); 
+             after(grammarAccess.getTransitionAccess().getGotoKeyword_2()); 
 
             }
 
@@ -1787,9 +1787,9 @@ public class InternalSfsmParser extends AbstractInternalContentAssistParser {
     // $ANTLR end "rule__SimpleFiniteStateMachine__NameAssignment_1"
 
 
-    // $ANTLR start "rule__SimpleFiniteStateMachine__InitialStateAssignment_4"
-    // ../be.kuleuven.learning.simplefsm.dsl.ui/src-gen/be/kuleuven/learning/simplefsm/ui/contentassist/antlr/internal/InternalSfsm.g:737:1: rule__SimpleFiniteStateMachine__InitialStateAssignment_4 : ( ruleState ) ;
-    public final void rule__SimpleFiniteStateMachine__InitialStateAssignment_4() throws RecognitionException {
+    // $ANTLR start "rule__SimpleFiniteStateMachine__StatesAssignment_4"
+    // ../be.kuleuven.learning.simplefsm.dsl.ui/src-gen/be/kuleuven/learning/simplefsm/ui/contentassist/antlr/internal/InternalSfsm.g:737:1: rule__SimpleFiniteStateMachine__StatesAssignment_4 : ( ruleState ) ;
+    public final void rule__SimpleFiniteStateMachine__StatesAssignment_4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
@@ -1800,13 +1800,13 @@ public class InternalSfsmParser extends AbstractInternalContentAssistParser {
             // ../be.kuleuven.learning.simplefsm.dsl.ui/src-gen/be/kuleuven/learning/simplefsm/ui/contentassist/antlr/internal/InternalSfsm.g:742:1: ( ruleState )
             // ../be.kuleuven.learning.simplefsm.dsl.ui/src-gen/be/kuleuven/learning/simplefsm/ui/contentassist/antlr/internal/InternalSfsm.g:743:1: ruleState
             {
-             before(grammarAccess.getSimpleFiniteStateMachineAccess().getInitialStateStateParserRuleCall_4_0()); 
-            pushFollow(FOLLOW_ruleState_in_rule__SimpleFiniteStateMachine__InitialStateAssignment_41412);
+             before(grammarAccess.getSimpleFiniteStateMachineAccess().getStatesStateParserRuleCall_4_0()); 
+            pushFollow(FOLLOW_ruleState_in_rule__SimpleFiniteStateMachine__StatesAssignment_41412);
             ruleState();
 
             state._fsp--;
 
-             after(grammarAccess.getSimpleFiniteStateMachineAccess().getInitialStateStateParserRuleCall_4_0()); 
+             after(grammarAccess.getSimpleFiniteStateMachineAccess().getStatesStateParserRuleCall_4_0()); 
 
             }
 
@@ -1825,7 +1825,7 @@ public class InternalSfsmParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__SimpleFiniteStateMachine__InitialStateAssignment_4"
+    // $ANTLR end "rule__SimpleFiniteStateMachine__StatesAssignment_4"
 
 
     // $ANTLR start "rule__SimpleFiniteStateMachine__StatesAssignment_5"
@@ -2056,7 +2056,7 @@ public class InternalSfsmParser extends AbstractInternalContentAssistParser {
     public static final BitSet FOLLOW_13_in_rule__SimpleFiniteStateMachine__Group__3__Impl463 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rule__SimpleFiniteStateMachine__Group__4__Impl_in_rule__SimpleFiniteStateMachine__Group__4494 = new BitSet(new long[]{0x000000000000C000L});
     public static final BitSet FOLLOW_rule__SimpleFiniteStateMachine__Group__5_in_rule__SimpleFiniteStateMachine__Group__4497 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__SimpleFiniteStateMachine__InitialStateAssignment_4_in_rule__SimpleFiniteStateMachine__Group__4__Impl524 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__SimpleFiniteStateMachine__StatesAssignment_4_in_rule__SimpleFiniteStateMachine__Group__4__Impl524 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rule__SimpleFiniteStateMachine__Group__5__Impl_in_rule__SimpleFiniteStateMachine__Group__5554 = new BitSet(new long[]{0x000000000000C000L});
     public static final BitSet FOLLOW_rule__SimpleFiniteStateMachine__Group__6_in_rule__SimpleFiniteStateMachine__Group__5557 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rule__SimpleFiniteStateMachine__StatesAssignment_5_in_rule__SimpleFiniteStateMachine__Group__5__Impl584 = new BitSet(new long[]{0x0000000000008002L});
@@ -2094,7 +2094,7 @@ public class InternalSfsmParser extends AbstractInternalContentAssistParser {
     public static final BitSet FOLLOW_rule__Transition__Group__3__Impl_in_rule__Transition__Group__31311 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rule__Transition__TargetAssignment_3_in_rule__Transition__Group__3__Impl1338 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_RULE_ID_in_rule__SimpleFiniteStateMachine__NameAssignment_11381 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleState_in_rule__SimpleFiniteStateMachine__InitialStateAssignment_41412 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleState_in_rule__SimpleFiniteStateMachine__StatesAssignment_41412 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleState_in_rule__SimpleFiniteStateMachine__StatesAssignment_51443 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_RULE_ID_in_rule__State__NameAssignment_11474 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleTransition_in_rule__State__OutgoingTransitionsAssignment_51505 = new BitSet(new long[]{0x0000000000000002L});

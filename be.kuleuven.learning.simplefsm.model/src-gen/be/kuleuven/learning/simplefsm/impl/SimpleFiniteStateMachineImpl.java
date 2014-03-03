@@ -19,7 +19,7 @@ import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
-import org.eclipse.emf.ecore.util.EObjectContainmentEList;
+import org.eclipse.emf.ecore.util.EObjectContainmentWithInverseEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
@@ -30,7 +30,6 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * The following features are implemented:
  * <ul>
  *   <li>{@link be.kuleuven.learning.simplefsm.impl.SimpleFiniteStateMachineImpl#getName <em>Name</em>}</li>
- *   <li>{@link be.kuleuven.learning.simplefsm.impl.SimpleFiniteStateMachineImpl#getInitialState <em>Initial State</em>}</li>
  *   <li>{@link be.kuleuven.learning.simplefsm.impl.SimpleFiniteStateMachineImpl#getStates <em>States</em>}</li>
  * </ul>
  * </p>
@@ -58,16 +57,6 @@ public class SimpleFiniteStateMachineImpl extends MinimalEObjectImpl.Container i
    * @ordered
    */
   protected String name = NAME_EDEFAULT;
-
-  /**
-   * The cached value of the '{@link #getInitialState() <em>Initial State</em>}' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getInitialState()
-   * @generated
-   * @ordered
-   */
-  protected State initialState;
 
   /**
    * The cached value of the '{@link #getStates() <em>States</em>}' containment reference list.
@@ -128,61 +117,30 @@ public class SimpleFiniteStateMachineImpl extends MinimalEObjectImpl.Container i
    * <!-- end-user-doc -->
    * @generated
    */
-  public State getInitialState()
-  {
-    return initialState;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public NotificationChain basicSetInitialState(State newInitialState, NotificationChain msgs)
-  {
-    State oldInitialState = initialState;
-    initialState = newInitialState;
-    if (eNotificationRequired())
-    {
-      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, SimplefsmPackage.SIMPLE_FINITE_STATE_MACHINE__INITIAL_STATE, oldInitialState, newInitialState);
-      if (msgs == null) msgs = notification; else msgs.add(notification);
-    }
-    return msgs;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public void setInitialState(State newInitialState)
-  {
-    if (newInitialState != initialState)
-    {
-      NotificationChain msgs = null;
-      if (initialState != null)
-        msgs = ((InternalEObject)initialState).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - SimplefsmPackage.SIMPLE_FINITE_STATE_MACHINE__INITIAL_STATE, null, msgs);
-      if (newInitialState != null)
-        msgs = ((InternalEObject)newInitialState).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - SimplefsmPackage.SIMPLE_FINITE_STATE_MACHINE__INITIAL_STATE, null, msgs);
-      msgs = basicSetInitialState(newInitialState, msgs);
-      if (msgs != null) msgs.dispatch();
-    }
-    else if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, SimplefsmPackage.SIMPLE_FINITE_STATE_MACHINE__INITIAL_STATE, newInitialState, newInitialState));
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
   public EList<State> getStates()
   {
     if (states == null)
     {
-      states = new EObjectContainmentEList<State>(State.class, this, SimplefsmPackage.SIMPLE_FINITE_STATE_MACHINE__STATES);
+      states = new EObjectContainmentWithInverseEList<State>(State.class, this, SimplefsmPackage.SIMPLE_FINITE_STATE_MACHINE__STATES, SimplefsmPackage.STATE__OWNING_FSM);
     }
     return states;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @SuppressWarnings("unchecked")
+  @Override
+  public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs)
+  {
+    switch (featureID)
+    {
+      case SimplefsmPackage.SIMPLE_FINITE_STATE_MACHINE__STATES:
+        return ((InternalEList<InternalEObject>)(InternalEList<?>)getStates()).basicAdd(otherEnd, msgs);
+    }
+    return super.eInverseAdd(otherEnd, featureID, msgs);
   }
 
   /**
@@ -195,8 +153,6 @@ public class SimpleFiniteStateMachineImpl extends MinimalEObjectImpl.Container i
   {
     switch (featureID)
     {
-      case SimplefsmPackage.SIMPLE_FINITE_STATE_MACHINE__INITIAL_STATE:
-        return basicSetInitialState(null, msgs);
       case SimplefsmPackage.SIMPLE_FINITE_STATE_MACHINE__STATES:
         return ((InternalEList<?>)getStates()).basicRemove(otherEnd, msgs);
     }
@@ -215,8 +171,6 @@ public class SimpleFiniteStateMachineImpl extends MinimalEObjectImpl.Container i
     {
       case SimplefsmPackage.SIMPLE_FINITE_STATE_MACHINE__NAME:
         return getName();
-      case SimplefsmPackage.SIMPLE_FINITE_STATE_MACHINE__INITIAL_STATE:
-        return getInitialState();
       case SimplefsmPackage.SIMPLE_FINITE_STATE_MACHINE__STATES:
         return getStates();
     }
@@ -236,9 +190,6 @@ public class SimpleFiniteStateMachineImpl extends MinimalEObjectImpl.Container i
     {
       case SimplefsmPackage.SIMPLE_FINITE_STATE_MACHINE__NAME:
         setName((String)newValue);
-        return;
-      case SimplefsmPackage.SIMPLE_FINITE_STATE_MACHINE__INITIAL_STATE:
-        setInitialState((State)newValue);
         return;
       case SimplefsmPackage.SIMPLE_FINITE_STATE_MACHINE__STATES:
         getStates().clear();
@@ -261,9 +212,6 @@ public class SimpleFiniteStateMachineImpl extends MinimalEObjectImpl.Container i
       case SimplefsmPackage.SIMPLE_FINITE_STATE_MACHINE__NAME:
         setName(NAME_EDEFAULT);
         return;
-      case SimplefsmPackage.SIMPLE_FINITE_STATE_MACHINE__INITIAL_STATE:
-        setInitialState((State)null);
-        return;
       case SimplefsmPackage.SIMPLE_FINITE_STATE_MACHINE__STATES:
         getStates().clear();
         return;
@@ -283,8 +231,6 @@ public class SimpleFiniteStateMachineImpl extends MinimalEObjectImpl.Container i
     {
       case SimplefsmPackage.SIMPLE_FINITE_STATE_MACHINE__NAME:
         return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
-      case SimplefsmPackage.SIMPLE_FINITE_STATE_MACHINE__INITIAL_STATE:
-        return initialState != null;
       case SimplefsmPackage.SIMPLE_FINITE_STATE_MACHINE__STATES:
         return states != null && !states.isEmpty();
     }

@@ -7,15 +7,12 @@ import be.kuleuven.learning.simplefsm.State;
 import be.kuleuven.learning.simplefsm.Transition;
 
 import org.eclipse.emf.common.notify.Notification;
-import org.eclipse.emf.common.notify.NotificationChain;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-
-import org.eclipse.emf.ecore.util.EcoreUtil;
 
 /**
  * <!-- begin-user-doc -->
@@ -24,8 +21,8 @@ import org.eclipse.emf.ecore.util.EcoreUtil;
  * <p>
  * The following features are implemented:
  * <ul>
+ *   <li>{@link be.kuleuven.learning.simplefsm.impl.TransitionImpl#getName <em>Name</em>}</li>
  *   <li>{@link be.kuleuven.learning.simplefsm.impl.TransitionImpl#getTarget <em>Target</em>}</li>
- *   <li>{@link be.kuleuven.learning.simplefsm.impl.TransitionImpl#getSource <em>Source</em>}</li>
  *   <li>{@link be.kuleuven.learning.simplefsm.impl.TransitionImpl#getEvent <em>Event</em>}</li>
  * </ul>
  * </p>
@@ -34,6 +31,26 @@ import org.eclipse.emf.ecore.util.EcoreUtil;
  */
 public class TransitionImpl extends MinimalEObjectImpl.Container implements Transition
 {
+  /**
+   * The default value of the '{@link #getName() <em>Name</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getName()
+   * @generated
+   * @ordered
+   */
+  protected static final String NAME_EDEFAULT = null;
+
+  /**
+   * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getName()
+   * @generated
+   * @ordered
+   */
+  protected String name = NAME_EDEFAULT;
+
   /**
    * The cached value of the '{@link #getTarget() <em>Target</em>}' reference.
    * <!-- begin-user-doc -->
@@ -90,6 +107,29 @@ public class TransitionImpl extends MinimalEObjectImpl.Container implements Tran
    * <!-- end-user-doc -->
    * @generated
    */
+  public String getName()
+  {
+    return name;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setName(String newName)
+  {
+    String oldName = name;
+    name = newName;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, SimplefsmPackage.TRANSITION__NAME, oldName, name));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public State getTarget()
   {
     if (target != null && target.eIsProxy())
@@ -133,62 +173,6 @@ public class TransitionImpl extends MinimalEObjectImpl.Container implements Tran
    * <!-- end-user-doc -->
    * @generated
    */
-  public State getSource()
-  {
-    if (eContainerFeatureID() != SimplefsmPackage.TRANSITION__SOURCE) return null;
-    return (State)eContainer();
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public State basicGetSource()
-  {
-    if (eContainerFeatureID() != SimplefsmPackage.TRANSITION__SOURCE) return null;
-    return (State)eInternalContainer();
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public NotificationChain basicSetSource(State newSource, NotificationChain msgs)
-  {
-    msgs = eBasicSetContainer((InternalEObject)newSource, SimplefsmPackage.TRANSITION__SOURCE, msgs);
-    return msgs;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public void setSource(State newSource)
-  {
-    if (newSource != eInternalContainer() || (eContainerFeatureID() != SimplefsmPackage.TRANSITION__SOURCE && newSource != null))
-    {
-      if (EcoreUtil.isAncestor(this, newSource))
-        throw new IllegalArgumentException("Recursive containment not allowed for " + toString());
-      NotificationChain msgs = null;
-      if (eInternalContainer() != null)
-        msgs = eBasicRemoveFromContainer(msgs);
-      if (newSource != null)
-        msgs = ((InternalEObject)newSource).eInverseAdd(this, SimplefsmPackage.STATE__OUTGOING_TRANSITIONS, State.class, msgs);
-      msgs = basicSetSource(newSource, msgs);
-      if (msgs != null) msgs.dispatch();
-    }
-    else if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, SimplefsmPackage.TRANSITION__SOURCE, newSource, newSource));
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
   public String getEvent()
   {
     return event;
@@ -213,66 +197,15 @@ public class TransitionImpl extends MinimalEObjectImpl.Container implements Tran
    * @generated
    */
   @Override
-  public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs)
-  {
-    switch (featureID)
-    {
-      case SimplefsmPackage.TRANSITION__SOURCE:
-        if (eInternalContainer() != null)
-          msgs = eBasicRemoveFromContainer(msgs);
-        return basicSetSource((State)otherEnd, msgs);
-    }
-    return super.eInverseAdd(otherEnd, featureID, msgs);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
-  {
-    switch (featureID)
-    {
-      case SimplefsmPackage.TRANSITION__SOURCE:
-        return basicSetSource(null, msgs);
-    }
-    return super.eInverseRemove(otherEnd, featureID, msgs);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public NotificationChain eBasicRemoveFromContainerFeature(NotificationChain msgs)
-  {
-    switch (eContainerFeatureID())
-    {
-      case SimplefsmPackage.TRANSITION__SOURCE:
-        return eInternalContainer().eInverseRemove(this, SimplefsmPackage.STATE__OUTGOING_TRANSITIONS, State.class, msgs);
-    }
-    return super.eBasicRemoveFromContainerFeature(msgs);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
   public Object eGet(int featureID, boolean resolve, boolean coreType)
   {
     switch (featureID)
     {
+      case SimplefsmPackage.TRANSITION__NAME:
+        return getName();
       case SimplefsmPackage.TRANSITION__TARGET:
         if (resolve) return getTarget();
         return basicGetTarget();
-      case SimplefsmPackage.TRANSITION__SOURCE:
-        if (resolve) return getSource();
-        return basicGetSource();
       case SimplefsmPackage.TRANSITION__EVENT:
         return getEvent();
     }
@@ -289,11 +222,11 @@ public class TransitionImpl extends MinimalEObjectImpl.Container implements Tran
   {
     switch (featureID)
     {
+      case SimplefsmPackage.TRANSITION__NAME:
+        setName((String)newValue);
+        return;
       case SimplefsmPackage.TRANSITION__TARGET:
         setTarget((State)newValue);
-        return;
-      case SimplefsmPackage.TRANSITION__SOURCE:
-        setSource((State)newValue);
         return;
       case SimplefsmPackage.TRANSITION__EVENT:
         setEvent((String)newValue);
@@ -312,11 +245,11 @@ public class TransitionImpl extends MinimalEObjectImpl.Container implements Tran
   {
     switch (featureID)
     {
+      case SimplefsmPackage.TRANSITION__NAME:
+        setName(NAME_EDEFAULT);
+        return;
       case SimplefsmPackage.TRANSITION__TARGET:
         setTarget((State)null);
-        return;
-      case SimplefsmPackage.TRANSITION__SOURCE:
-        setSource((State)null);
         return;
       case SimplefsmPackage.TRANSITION__EVENT:
         setEvent(EVENT_EDEFAULT);
@@ -335,10 +268,10 @@ public class TransitionImpl extends MinimalEObjectImpl.Container implements Tran
   {
     switch (featureID)
     {
+      case SimplefsmPackage.TRANSITION__NAME:
+        return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
       case SimplefsmPackage.TRANSITION__TARGET:
         return target != null;
-      case SimplefsmPackage.TRANSITION__SOURCE:
-        return basicGetSource() != null;
       case SimplefsmPackage.TRANSITION__EVENT:
         return EVENT_EDEFAULT == null ? event != null : !EVENT_EDEFAULT.equals(event);
     }
@@ -356,7 +289,9 @@ public class TransitionImpl extends MinimalEObjectImpl.Container implements Tran
     if (eIsProxy()) return super.toString();
 
     StringBuffer result = new StringBuffer(super.toString());
-    result.append(" (event: ");
+    result.append(" (name: ");
+    result.append(name);
+    result.append(", event: ");
     result.append(event);
     result.append(')');
     return result.toString();
