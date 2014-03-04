@@ -82,6 +82,7 @@ public interface State extends EObject
   /**
    * Returns the value of the '<em><b>Outgoing Transitions</b></em>' containment reference list.
    * The list contents are of type {@link be.kuleuven.learning.simplefsm.Transition}.
+   * It is bidirectional and its opposite is '{@link be.kuleuven.learning.simplefsm.Transition#getOwningState <em>Owning State</em>}'.
    * <!-- begin-user-doc -->
    * <p>
    * If the meaning of the '<em>Outgoing Transitions</em>' containment reference list isn't clear,
@@ -90,7 +91,8 @@ public interface State extends EObject
    * <!-- end-user-doc -->
    * @return the value of the '<em>Outgoing Transitions</em>' containment reference list.
    * @see be.kuleuven.learning.simplefsm.SimplefsmPackage#getState_OutgoingTransitions()
-   * @model containment="true"
+   * @see be.kuleuven.learning.simplefsm.Transition#getOwningState
+   * @model opposite="owningState" containment="true"
    * @generated
    */
   EList<Transition> getOutgoingTransitions();

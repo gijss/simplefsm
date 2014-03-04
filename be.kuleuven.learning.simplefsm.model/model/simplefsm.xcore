@@ -13,7 +13,7 @@ class State
 {
 	String name
 	String action
-	contains Transition[] outgoingTransitions// opposite source
+	contains Transition[] outgoingTransitions opposite owningState
 	//refers Transition[] incomingTransitions opposite target
 	container SimpleFiniteStateMachine owningFSM opposite states
 }
@@ -23,6 +23,6 @@ class Transition
 	String name
 	refers State target// opposite incomingTransitions
 	//refers State source opposite outgoingTransitions
-	//container SimpleFiniteStateMachine owningFSM opposite transitions	
+	container State owningState opposite outgoingTransitions	
 	String event
 }

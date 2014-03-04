@@ -7,12 +7,15 @@ import be.kuleuven.learning.simplefsm.State;
 import be.kuleuven.learning.simplefsm.Transition;
 
 import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.common.notify.NotificationChain;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
+
+import org.eclipse.emf.ecore.util.EcoreUtil;
 
 /**
  * <!-- begin-user-doc -->
@@ -23,6 +26,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  * <ul>
  *   <li>{@link be.kuleuven.learning.simplefsm.impl.TransitionImpl#getName <em>Name</em>}</li>
  *   <li>{@link be.kuleuven.learning.simplefsm.impl.TransitionImpl#getTarget <em>Target</em>}</li>
+ *   <li>{@link be.kuleuven.learning.simplefsm.impl.TransitionImpl#getOwningState <em>Owning State</em>}</li>
  *   <li>{@link be.kuleuven.learning.simplefsm.impl.TransitionImpl#getEvent <em>Event</em>}</li>
  * </ul>
  * </p>
@@ -173,6 +177,62 @@ public class TransitionImpl extends MinimalEObjectImpl.Container implements Tran
    * <!-- end-user-doc -->
    * @generated
    */
+  public State getOwningState()
+  {
+    if (eContainerFeatureID() != SimplefsmPackage.TRANSITION__OWNING_STATE) return null;
+    return (State)eContainer();
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public State basicGetOwningState()
+  {
+    if (eContainerFeatureID() != SimplefsmPackage.TRANSITION__OWNING_STATE) return null;
+    return (State)eInternalContainer();
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public NotificationChain basicSetOwningState(State newOwningState, NotificationChain msgs)
+  {
+    msgs = eBasicSetContainer((InternalEObject)newOwningState, SimplefsmPackage.TRANSITION__OWNING_STATE, msgs);
+    return msgs;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setOwningState(State newOwningState)
+  {
+    if (newOwningState != eInternalContainer() || (eContainerFeatureID() != SimplefsmPackage.TRANSITION__OWNING_STATE && newOwningState != null))
+    {
+      if (EcoreUtil.isAncestor(this, newOwningState))
+        throw new IllegalArgumentException("Recursive containment not allowed for " + toString());
+      NotificationChain msgs = null;
+      if (eInternalContainer() != null)
+        msgs = eBasicRemoveFromContainer(msgs);
+      if (newOwningState != null)
+        msgs = ((InternalEObject)newOwningState).eInverseAdd(this, SimplefsmPackage.STATE__OUTGOING_TRANSITIONS, State.class, msgs);
+      msgs = basicSetOwningState(newOwningState, msgs);
+      if (msgs != null) msgs.dispatch();
+    }
+    else if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, SimplefsmPackage.TRANSITION__OWNING_STATE, newOwningState, newOwningState));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public String getEvent()
   {
     return event;
@@ -197,6 +257,56 @@ public class TransitionImpl extends MinimalEObjectImpl.Container implements Tran
    * @generated
    */
   @Override
+  public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs)
+  {
+    switch (featureID)
+    {
+      case SimplefsmPackage.TRANSITION__OWNING_STATE:
+        if (eInternalContainer() != null)
+          msgs = eBasicRemoveFromContainer(msgs);
+        return basicSetOwningState((State)otherEnd, msgs);
+    }
+    return super.eInverseAdd(otherEnd, featureID, msgs);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
+  {
+    switch (featureID)
+    {
+      case SimplefsmPackage.TRANSITION__OWNING_STATE:
+        return basicSetOwningState(null, msgs);
+    }
+    return super.eInverseRemove(otherEnd, featureID, msgs);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public NotificationChain eBasicRemoveFromContainerFeature(NotificationChain msgs)
+  {
+    switch (eContainerFeatureID())
+    {
+      case SimplefsmPackage.TRANSITION__OWNING_STATE:
+        return eInternalContainer().eInverseRemove(this, SimplefsmPackage.STATE__OUTGOING_TRANSITIONS, State.class, msgs);
+    }
+    return super.eBasicRemoveFromContainerFeature(msgs);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
   public Object eGet(int featureID, boolean resolve, boolean coreType)
   {
     switch (featureID)
@@ -206,6 +316,9 @@ public class TransitionImpl extends MinimalEObjectImpl.Container implements Tran
       case SimplefsmPackage.TRANSITION__TARGET:
         if (resolve) return getTarget();
         return basicGetTarget();
+      case SimplefsmPackage.TRANSITION__OWNING_STATE:
+        if (resolve) return getOwningState();
+        return basicGetOwningState();
       case SimplefsmPackage.TRANSITION__EVENT:
         return getEvent();
     }
@@ -227,6 +340,9 @@ public class TransitionImpl extends MinimalEObjectImpl.Container implements Tran
         return;
       case SimplefsmPackage.TRANSITION__TARGET:
         setTarget((State)newValue);
+        return;
+      case SimplefsmPackage.TRANSITION__OWNING_STATE:
+        setOwningState((State)newValue);
         return;
       case SimplefsmPackage.TRANSITION__EVENT:
         setEvent((String)newValue);
@@ -251,6 +367,9 @@ public class TransitionImpl extends MinimalEObjectImpl.Container implements Tran
       case SimplefsmPackage.TRANSITION__TARGET:
         setTarget((State)null);
         return;
+      case SimplefsmPackage.TRANSITION__OWNING_STATE:
+        setOwningState((State)null);
+        return;
       case SimplefsmPackage.TRANSITION__EVENT:
         setEvent(EVENT_EDEFAULT);
         return;
@@ -272,6 +391,8 @@ public class TransitionImpl extends MinimalEObjectImpl.Container implements Tran
         return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
       case SimplefsmPackage.TRANSITION__TARGET:
         return target != null;
+      case SimplefsmPackage.TRANSITION__OWNING_STATE:
+        return basicGetOwningState() != null;
       case SimplefsmPackage.TRANSITION__EVENT:
         return EVENT_EDEFAULT == null ? event != null : !EVENT_EDEFAULT.equals(event);
     }

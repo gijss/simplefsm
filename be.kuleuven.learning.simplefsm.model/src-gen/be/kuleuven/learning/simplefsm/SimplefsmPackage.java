@@ -197,13 +197,22 @@ public interface SimplefsmPackage extends EPackage
   int TRANSITION__TARGET = 1;
 
   /**
+   * The feature id for the '<em><b>Owning State</b></em>' container reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int TRANSITION__OWNING_STATE = 2;
+
+  /**
    * The feature id for the '<em><b>Event</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int TRANSITION__EVENT = 2;
+  int TRANSITION__EVENT = 3;
 
   /**
    * The number of structural features of the '<em>Transition</em>' class.
@@ -212,7 +221,7 @@ public interface SimplefsmPackage extends EPackage
    * @generated
    * @ordered
    */
-  int TRANSITION_FEATURE_COUNT = 3;
+  int TRANSITION_FEATURE_COUNT = 4;
 
   /**
    * The number of operations of the '<em>Transition</em>' class.
@@ -343,6 +352,17 @@ public interface SimplefsmPackage extends EPackage
   EReference getTransition_Target();
 
   /**
+   * Returns the meta object for the container reference '{@link be.kuleuven.learning.simplefsm.Transition#getOwningState <em>Owning State</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the container reference '<em>Owning State</em>'.
+   * @see be.kuleuven.learning.simplefsm.Transition#getOwningState()
+   * @see #getTransition()
+   * @generated
+   */
+  EReference getTransition_OwningState();
+
+  /**
    * Returns the meta object for the attribute '{@link be.kuleuven.learning.simplefsm.Transition#getEvent <em>Event</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -470,6 +490,14 @@ public interface SimplefsmPackage extends EPackage
      * @generated
      */
     EReference TRANSITION__TARGET = eINSTANCE.getTransition_Target();
+
+    /**
+     * The meta object literal for the '<em><b>Owning State</b></em>' container reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference TRANSITION__OWNING_STATE = eINSTANCE.getTransition_OwningState();
 
     /**
      * The meta object literal for the '<em><b>Event</b></em>' attribute feature.
