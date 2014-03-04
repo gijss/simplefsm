@@ -1,9 +1,9 @@
 package be.kuleuven.learning.simplefsm.serializer;
 
-import be.kuleuven.learning.simplefsm.SimpleFiniteStateMachine;
-import be.kuleuven.learning.simplefsm.SimplefsmPackage;
-import be.kuleuven.learning.simplefsm.State;
-import be.kuleuven.learning.simplefsm.Transition;
+import be.kuleuven.learning.simplefsm.model.ModelPackage;
+import be.kuleuven.learning.simplefsm.model.SimpleFiniteStateMachine;
+import be.kuleuven.learning.simplefsm.model.State;
+import be.kuleuven.learning.simplefsm.model.Transition;
 import be.kuleuven.learning.simplefsm.services.SfsmGrammarAccess;
 import com.google.inject.Inject;
 import com.google.inject.Provider;
@@ -23,20 +23,20 @@ public class SfsmSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	private SfsmGrammarAccess grammarAccess;
 	
 	public void createSequence(EObject context, EObject semanticObject) {
-		if(semanticObject.eClass().getEPackage() == SimplefsmPackage.eINSTANCE) switch(semanticObject.eClass().getClassifierID()) {
-			case SimplefsmPackage.SIMPLE_FINITE_STATE_MACHINE:
+		if(semanticObject.eClass().getEPackage() == ModelPackage.eINSTANCE) switch(semanticObject.eClass().getClassifierID()) {
+			case ModelPackage.SIMPLE_FINITE_STATE_MACHINE:
 				if(context == grammarAccess.getSimpleFiniteStateMachineRule()) {
 					sequence_SimpleFiniteStateMachine(context, (SimpleFiniteStateMachine) semanticObject); 
 					return; 
 				}
 				else break;
-			case SimplefsmPackage.STATE:
+			case ModelPackage.STATE:
 				if(context == grammarAccess.getStateRule()) {
 					sequence_State(context, (State) semanticObject); 
 					return; 
 				}
 				else break;
-			case SimplefsmPackage.TRANSITION:
+			case ModelPackage.TRANSITION:
 				if(context == grammarAccess.getTransitionRule()) {
 					sequence_Transition(context, (Transition) semanticObject); 
 					return; 

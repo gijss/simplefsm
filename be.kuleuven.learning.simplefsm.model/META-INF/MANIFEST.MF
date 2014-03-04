@@ -7,9 +7,9 @@ Bundle-ClassPath: .
 Bundle-Vendor: %providerName
 Bundle-Localization: plugin
 Bundle-RequiredExecutionEnvironment: JavaSE-1.7
-Export-Package: be.kuleuven.learning.simplefsm,
- be.kuleuven.learning.simplefsm.impl,
- be.kuleuven.learning.simplefsm.util
+Export-Package: be.kuleuven.learning.simplefsm.model,
+ be.kuleuven.learning.simplefsm.model.impl,
+ be.kuleuven.learning.simplefsm.model.util
 Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.emf.ecore,
  org.eclipse.xtext.xbase.lib,

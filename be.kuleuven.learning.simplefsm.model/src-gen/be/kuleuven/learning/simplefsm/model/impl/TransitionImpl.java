@@ -1,10 +1,10 @@
 /**
  */
-package be.kuleuven.learning.simplefsm.impl;
+package be.kuleuven.learning.simplefsm.model.impl;
 
-import be.kuleuven.learning.simplefsm.SimplefsmPackage;
-import be.kuleuven.learning.simplefsm.State;
-import be.kuleuven.learning.simplefsm.Transition;
+import be.kuleuven.learning.simplefsm.model.ModelPackage;
+import be.kuleuven.learning.simplefsm.model.State;
+import be.kuleuven.learning.simplefsm.model.Transition;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
@@ -24,10 +24,10 @@ import org.eclipse.emf.ecore.util.EcoreUtil;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link be.kuleuven.learning.simplefsm.impl.TransitionImpl#getName <em>Name</em>}</li>
- *   <li>{@link be.kuleuven.learning.simplefsm.impl.TransitionImpl#getTarget <em>Target</em>}</li>
- *   <li>{@link be.kuleuven.learning.simplefsm.impl.TransitionImpl#getOwningState <em>Owning State</em>}</li>
- *   <li>{@link be.kuleuven.learning.simplefsm.impl.TransitionImpl#getEvent <em>Event</em>}</li>
+ *   <li>{@link be.kuleuven.learning.simplefsm.model.impl.TransitionImpl#getName <em>Name</em>}</li>
+ *   <li>{@link be.kuleuven.learning.simplefsm.model.impl.TransitionImpl#getTarget <em>Target</em>}</li>
+ *   <li>{@link be.kuleuven.learning.simplefsm.model.impl.TransitionImpl#getOwningState <em>Owning State</em>}</li>
+ *   <li>{@link be.kuleuven.learning.simplefsm.model.impl.TransitionImpl#getEvent <em>Event</em>}</li>
  * </ul>
  * </p>
  *
@@ -103,7 +103,7 @@ public class TransitionImpl extends MinimalEObjectImpl.Container implements Tran
   @Override
   protected EClass eStaticClass()
   {
-    return SimplefsmPackage.Literals.TRANSITION;
+    return ModelPackage.Literals.TRANSITION;
   }
 
   /**
@@ -126,7 +126,7 @@ public class TransitionImpl extends MinimalEObjectImpl.Container implements Tran
     String oldName = name;
     name = newName;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, SimplefsmPackage.TRANSITION__NAME, oldName, name));
+      eNotify(new ENotificationImpl(this, Notification.SET, ModelPackage.TRANSITION__NAME, oldName, name));
   }
 
   /**
@@ -143,7 +143,7 @@ public class TransitionImpl extends MinimalEObjectImpl.Container implements Tran
       if (target != oldTarget)
       {
         if (eNotificationRequired())
-          eNotify(new ENotificationImpl(this, Notification.RESOLVE, SimplefsmPackage.TRANSITION__TARGET, oldTarget, target));
+          eNotify(new ENotificationImpl(this, Notification.RESOLVE, ModelPackage.TRANSITION__TARGET, oldTarget, target));
       }
     }
     return target;
@@ -169,7 +169,7 @@ public class TransitionImpl extends MinimalEObjectImpl.Container implements Tran
     State oldTarget = target;
     target = newTarget;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, SimplefsmPackage.TRANSITION__TARGET, oldTarget, target));
+      eNotify(new ENotificationImpl(this, Notification.SET, ModelPackage.TRANSITION__TARGET, oldTarget, target));
   }
 
   /**
@@ -179,7 +179,7 @@ public class TransitionImpl extends MinimalEObjectImpl.Container implements Tran
    */
   public State getOwningState()
   {
-    if (eContainerFeatureID() != SimplefsmPackage.TRANSITION__OWNING_STATE) return null;
+    if (eContainerFeatureID() != ModelPackage.TRANSITION__OWNING_STATE) return null;
     return (State)eContainer();
   }
 
@@ -190,7 +190,7 @@ public class TransitionImpl extends MinimalEObjectImpl.Container implements Tran
    */
   public State basicGetOwningState()
   {
-    if (eContainerFeatureID() != SimplefsmPackage.TRANSITION__OWNING_STATE) return null;
+    if (eContainerFeatureID() != ModelPackage.TRANSITION__OWNING_STATE) return null;
     return (State)eInternalContainer();
   }
 
@@ -201,7 +201,7 @@ public class TransitionImpl extends MinimalEObjectImpl.Container implements Tran
    */
   public NotificationChain basicSetOwningState(State newOwningState, NotificationChain msgs)
   {
-    msgs = eBasicSetContainer((InternalEObject)newOwningState, SimplefsmPackage.TRANSITION__OWNING_STATE, msgs);
+    msgs = eBasicSetContainer((InternalEObject)newOwningState, ModelPackage.TRANSITION__OWNING_STATE, msgs);
     return msgs;
   }
 
@@ -212,7 +212,7 @@ public class TransitionImpl extends MinimalEObjectImpl.Container implements Tran
    */
   public void setOwningState(State newOwningState)
   {
-    if (newOwningState != eInternalContainer() || (eContainerFeatureID() != SimplefsmPackage.TRANSITION__OWNING_STATE && newOwningState != null))
+    if (newOwningState != eInternalContainer() || (eContainerFeatureID() != ModelPackage.TRANSITION__OWNING_STATE && newOwningState != null))
     {
       if (EcoreUtil.isAncestor(this, newOwningState))
         throw new IllegalArgumentException("Recursive containment not allowed for " + toString());
@@ -220,12 +220,12 @@ public class TransitionImpl extends MinimalEObjectImpl.Container implements Tran
       if (eInternalContainer() != null)
         msgs = eBasicRemoveFromContainer(msgs);
       if (newOwningState != null)
-        msgs = ((InternalEObject)newOwningState).eInverseAdd(this, SimplefsmPackage.STATE__OUTGOING_TRANSITIONS, State.class, msgs);
+        msgs = ((InternalEObject)newOwningState).eInverseAdd(this, ModelPackage.STATE__OUTGOING_TRANSITIONS, State.class, msgs);
       msgs = basicSetOwningState(newOwningState, msgs);
       if (msgs != null) msgs.dispatch();
     }
     else if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, SimplefsmPackage.TRANSITION__OWNING_STATE, newOwningState, newOwningState));
+      eNotify(new ENotificationImpl(this, Notification.SET, ModelPackage.TRANSITION__OWNING_STATE, newOwningState, newOwningState));
   }
 
   /**
@@ -248,7 +248,7 @@ public class TransitionImpl extends MinimalEObjectImpl.Container implements Tran
     String oldEvent = event;
     event = newEvent;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, SimplefsmPackage.TRANSITION__EVENT, oldEvent, event));
+      eNotify(new ENotificationImpl(this, Notification.SET, ModelPackage.TRANSITION__EVENT, oldEvent, event));
   }
 
   /**
@@ -261,7 +261,7 @@ public class TransitionImpl extends MinimalEObjectImpl.Container implements Tran
   {
     switch (featureID)
     {
-      case SimplefsmPackage.TRANSITION__OWNING_STATE:
+      case ModelPackage.TRANSITION__OWNING_STATE:
         if (eInternalContainer() != null)
           msgs = eBasicRemoveFromContainer(msgs);
         return basicSetOwningState((State)otherEnd, msgs);
@@ -279,7 +279,7 @@ public class TransitionImpl extends MinimalEObjectImpl.Container implements Tran
   {
     switch (featureID)
     {
-      case SimplefsmPackage.TRANSITION__OWNING_STATE:
+      case ModelPackage.TRANSITION__OWNING_STATE:
         return basicSetOwningState(null, msgs);
     }
     return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -295,8 +295,8 @@ public class TransitionImpl extends MinimalEObjectImpl.Container implements Tran
   {
     switch (eContainerFeatureID())
     {
-      case SimplefsmPackage.TRANSITION__OWNING_STATE:
-        return eInternalContainer().eInverseRemove(this, SimplefsmPackage.STATE__OUTGOING_TRANSITIONS, State.class, msgs);
+      case ModelPackage.TRANSITION__OWNING_STATE:
+        return eInternalContainer().eInverseRemove(this, ModelPackage.STATE__OUTGOING_TRANSITIONS, State.class, msgs);
     }
     return super.eBasicRemoveFromContainerFeature(msgs);
   }
@@ -311,15 +311,15 @@ public class TransitionImpl extends MinimalEObjectImpl.Container implements Tran
   {
     switch (featureID)
     {
-      case SimplefsmPackage.TRANSITION__NAME:
+      case ModelPackage.TRANSITION__NAME:
         return getName();
-      case SimplefsmPackage.TRANSITION__TARGET:
+      case ModelPackage.TRANSITION__TARGET:
         if (resolve) return getTarget();
         return basicGetTarget();
-      case SimplefsmPackage.TRANSITION__OWNING_STATE:
+      case ModelPackage.TRANSITION__OWNING_STATE:
         if (resolve) return getOwningState();
         return basicGetOwningState();
-      case SimplefsmPackage.TRANSITION__EVENT:
+      case ModelPackage.TRANSITION__EVENT:
         return getEvent();
     }
     return super.eGet(featureID, resolve, coreType);
@@ -335,16 +335,16 @@ public class TransitionImpl extends MinimalEObjectImpl.Container implements Tran
   {
     switch (featureID)
     {
-      case SimplefsmPackage.TRANSITION__NAME:
+      case ModelPackage.TRANSITION__NAME:
         setName((String)newValue);
         return;
-      case SimplefsmPackage.TRANSITION__TARGET:
+      case ModelPackage.TRANSITION__TARGET:
         setTarget((State)newValue);
         return;
-      case SimplefsmPackage.TRANSITION__OWNING_STATE:
+      case ModelPackage.TRANSITION__OWNING_STATE:
         setOwningState((State)newValue);
         return;
-      case SimplefsmPackage.TRANSITION__EVENT:
+      case ModelPackage.TRANSITION__EVENT:
         setEvent((String)newValue);
         return;
     }
@@ -361,16 +361,16 @@ public class TransitionImpl extends MinimalEObjectImpl.Container implements Tran
   {
     switch (featureID)
     {
-      case SimplefsmPackage.TRANSITION__NAME:
+      case ModelPackage.TRANSITION__NAME:
         setName(NAME_EDEFAULT);
         return;
-      case SimplefsmPackage.TRANSITION__TARGET:
+      case ModelPackage.TRANSITION__TARGET:
         setTarget((State)null);
         return;
-      case SimplefsmPackage.TRANSITION__OWNING_STATE:
+      case ModelPackage.TRANSITION__OWNING_STATE:
         setOwningState((State)null);
         return;
-      case SimplefsmPackage.TRANSITION__EVENT:
+      case ModelPackage.TRANSITION__EVENT:
         setEvent(EVENT_EDEFAULT);
         return;
     }
@@ -387,13 +387,13 @@ public class TransitionImpl extends MinimalEObjectImpl.Container implements Tran
   {
     switch (featureID)
     {
-      case SimplefsmPackage.TRANSITION__NAME:
+      case ModelPackage.TRANSITION__NAME:
         return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
-      case SimplefsmPackage.TRANSITION__TARGET:
+      case ModelPackage.TRANSITION__TARGET:
         return target != null;
-      case SimplefsmPackage.TRANSITION__OWNING_STATE:
+      case ModelPackage.TRANSITION__OWNING_STATE:
         return basicGetOwningState() != null;
-      case SimplefsmPackage.TRANSITION__EVENT:
+      case ModelPackage.TRANSITION__EVENT:
         return EVENT_EDEFAULT == null ? event != null : !EVENT_EDEFAULT.equals(event);
     }
     return super.eIsSet(featureID);

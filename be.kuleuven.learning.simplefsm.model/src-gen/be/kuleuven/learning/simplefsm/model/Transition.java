@@ -1,6 +1,6 @@
 /**
  */
-package be.kuleuven.learning.simplefsm;
+package be.kuleuven.learning.simplefsm.model;
 
 import org.eclipse.emf.ecore.EObject;
 
@@ -12,14 +12,14 @@ import org.eclipse.emf.ecore.EObject;
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link be.kuleuven.learning.simplefsm.Transition#getName <em>Name</em>}</li>
- *   <li>{@link be.kuleuven.learning.simplefsm.Transition#getTarget <em>Target</em>}</li>
- *   <li>{@link be.kuleuven.learning.simplefsm.Transition#getOwningState <em>Owning State</em>}</li>
- *   <li>{@link be.kuleuven.learning.simplefsm.Transition#getEvent <em>Event</em>}</li>
+ *   <li>{@link be.kuleuven.learning.simplefsm.model.Transition#getName <em>Name</em>}</li>
+ *   <li>{@link be.kuleuven.learning.simplefsm.model.Transition#getTarget <em>Target</em>}</li>
+ *   <li>{@link be.kuleuven.learning.simplefsm.model.Transition#getOwningState <em>Owning State</em>}</li>
+ *   <li>{@link be.kuleuven.learning.simplefsm.model.Transition#getEvent <em>Event</em>}</li>
  * </ul>
  * </p>
  *
- * @see be.kuleuven.learning.simplefsm.SimplefsmPackage#getTransition()
+ * @see be.kuleuven.learning.simplefsm.model.ModelPackage#getTransition()
  * @model
  * @generated
  */
@@ -35,14 +35,14 @@ public interface Transition extends EObject
    * <!-- end-user-doc -->
    * @return the value of the '<em>Name</em>' attribute.
    * @see #setName(String)
-   * @see be.kuleuven.learning.simplefsm.SimplefsmPackage#getTransition_Name()
+   * @see be.kuleuven.learning.simplefsm.model.ModelPackage#getTransition_Name()
    * @model unique="false"
    * @generated
    */
   String getName();
 
   /**
-   * Sets the value of the '{@link be.kuleuven.learning.simplefsm.Transition#getName <em>Name</em>}' attribute.
+   * Sets the value of the '{@link be.kuleuven.learning.simplefsm.model.Transition#getName <em>Name</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @param value the new value of the '<em>Name</em>' attribute.
@@ -61,14 +61,14 @@ public interface Transition extends EObject
    * <!-- end-user-doc -->
    * @return the value of the '<em>Target</em>' reference.
    * @see #setTarget(State)
-   * @see be.kuleuven.learning.simplefsm.SimplefsmPackage#getTransition_Target()
+   * @see be.kuleuven.learning.simplefsm.model.ModelPackage#getTransition_Target()
    * @model
    * @generated
    */
   State getTarget();
 
   /**
-   * Sets the value of the '{@link be.kuleuven.learning.simplefsm.Transition#getTarget <em>Target</em>}' reference.
+   * Sets the value of the '{@link be.kuleuven.learning.simplefsm.model.Transition#getTarget <em>Target</em>}' reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @param value the new value of the '<em>Target</em>' reference.
@@ -79,7 +79,7 @@ public interface Transition extends EObject
 
   /**
    * Returns the value of the '<em><b>Owning State</b></em>' container reference.
-   * It is bidirectional and its opposite is '{@link be.kuleuven.learning.simplefsm.State#getOutgoingTransitions <em>Outgoing Transitions</em>}'.
+   * It is bidirectional and its opposite is '{@link be.kuleuven.learning.simplefsm.model.State#getOutgoingTransitions <em>Outgoing Transitions</em>}'.
    * <!-- begin-user-doc -->
    * <p>
    * If the meaning of the '<em>Owning State</em>' container reference isn't clear,
@@ -88,15 +88,15 @@ public interface Transition extends EObject
    * <!-- end-user-doc -->
    * @return the value of the '<em>Owning State</em>' container reference.
    * @see #setOwningState(State)
-   * @see be.kuleuven.learning.simplefsm.SimplefsmPackage#getTransition_OwningState()
-   * @see be.kuleuven.learning.simplefsm.State#getOutgoingTransitions
+   * @see be.kuleuven.learning.simplefsm.model.ModelPackage#getTransition_OwningState()
+   * @see be.kuleuven.learning.simplefsm.model.State#getOutgoingTransitions
    * @model opposite="outgoingTransitions" transient="false"
    * @generated
    */
   State getOwningState();
 
   /**
-   * Sets the value of the '{@link be.kuleuven.learning.simplefsm.Transition#getOwningState <em>Owning State</em>}' container reference.
+   * Sets the value of the '{@link be.kuleuven.learning.simplefsm.model.Transition#getOwningState <em>Owning State</em>}' container reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @param value the new value of the '<em>Owning State</em>' container reference.
@@ -115,14 +115,14 @@ public interface Transition extends EObject
    * <!-- end-user-doc -->
    * @return the value of the '<em>Event</em>' attribute.
    * @see #setEvent(String)
-   * @see be.kuleuven.learning.simplefsm.SimplefsmPackage#getTransition_Event()
+   * @see be.kuleuven.learning.simplefsm.model.ModelPackage#getTransition_Event()
    * @model unique="false"
    * @generated
    */
   String getEvent();
 
   /**
-   * Sets the value of the '{@link be.kuleuven.learning.simplefsm.Transition#getEvent <em>Event</em>}' attribute.
+   * Sets the value of the '{@link be.kuleuven.learning.simplefsm.model.Transition#getEvent <em>Event</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @param value the new value of the '<em>Event</em>' attribute.

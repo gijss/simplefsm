@@ -1,10 +1,10 @@
 /**
  */
-package be.kuleuven.learning.simplefsm.impl;
+package be.kuleuven.learning.simplefsm.model.impl;
 
-import be.kuleuven.learning.simplefsm.SimpleFiniteStateMachine;
-import be.kuleuven.learning.simplefsm.SimplefsmPackage;
-import be.kuleuven.learning.simplefsm.State;
+import be.kuleuven.learning.simplefsm.model.ModelPackage;
+import be.kuleuven.learning.simplefsm.model.SimpleFiniteStateMachine;
+import be.kuleuven.learning.simplefsm.model.State;
 
 import java.util.Collection;
 
@@ -29,8 +29,8 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link be.kuleuven.learning.simplefsm.impl.SimpleFiniteStateMachineImpl#getName <em>Name</em>}</li>
- *   <li>{@link be.kuleuven.learning.simplefsm.impl.SimpleFiniteStateMachineImpl#getStates <em>States</em>}</li>
+ *   <li>{@link be.kuleuven.learning.simplefsm.model.impl.SimpleFiniteStateMachineImpl#getName <em>Name</em>}</li>
+ *   <li>{@link be.kuleuven.learning.simplefsm.model.impl.SimpleFiniteStateMachineImpl#getStates <em>States</em>}</li>
  * </ul>
  * </p>
  *
@@ -86,7 +86,7 @@ public class SimpleFiniteStateMachineImpl extends MinimalEObjectImpl.Container i
   @Override
   protected EClass eStaticClass()
   {
-    return SimplefsmPackage.Literals.SIMPLE_FINITE_STATE_MACHINE;
+    return ModelPackage.Literals.SIMPLE_FINITE_STATE_MACHINE;
   }
 
   /**
@@ -109,7 +109,7 @@ public class SimpleFiniteStateMachineImpl extends MinimalEObjectImpl.Container i
     String oldName = name;
     name = newName;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, SimplefsmPackage.SIMPLE_FINITE_STATE_MACHINE__NAME, oldName, name));
+      eNotify(new ENotificationImpl(this, Notification.SET, ModelPackage.SIMPLE_FINITE_STATE_MACHINE__NAME, oldName, name));
   }
 
   /**
@@ -121,7 +121,7 @@ public class SimpleFiniteStateMachineImpl extends MinimalEObjectImpl.Container i
   {
     if (states == null)
     {
-      states = new EObjectContainmentWithInverseEList<State>(State.class, this, SimplefsmPackage.SIMPLE_FINITE_STATE_MACHINE__STATES, SimplefsmPackage.STATE__OWNING_FSM);
+      states = new EObjectContainmentWithInverseEList<State>(State.class, this, ModelPackage.SIMPLE_FINITE_STATE_MACHINE__STATES, ModelPackage.STATE__OWNING_FSM);
     }
     return states;
   }
@@ -137,7 +137,7 @@ public class SimpleFiniteStateMachineImpl extends MinimalEObjectImpl.Container i
   {
     switch (featureID)
     {
-      case SimplefsmPackage.SIMPLE_FINITE_STATE_MACHINE__STATES:
+      case ModelPackage.SIMPLE_FINITE_STATE_MACHINE__STATES:
         return ((InternalEList<InternalEObject>)(InternalEList<?>)getStates()).basicAdd(otherEnd, msgs);
     }
     return super.eInverseAdd(otherEnd, featureID, msgs);
@@ -153,7 +153,7 @@ public class SimpleFiniteStateMachineImpl extends MinimalEObjectImpl.Container i
   {
     switch (featureID)
     {
-      case SimplefsmPackage.SIMPLE_FINITE_STATE_MACHINE__STATES:
+      case ModelPackage.SIMPLE_FINITE_STATE_MACHINE__STATES:
         return ((InternalEList<?>)getStates()).basicRemove(otherEnd, msgs);
     }
     return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -169,9 +169,9 @@ public class SimpleFiniteStateMachineImpl extends MinimalEObjectImpl.Container i
   {
     switch (featureID)
     {
-      case SimplefsmPackage.SIMPLE_FINITE_STATE_MACHINE__NAME:
+      case ModelPackage.SIMPLE_FINITE_STATE_MACHINE__NAME:
         return getName();
-      case SimplefsmPackage.SIMPLE_FINITE_STATE_MACHINE__STATES:
+      case ModelPackage.SIMPLE_FINITE_STATE_MACHINE__STATES:
         return getStates();
     }
     return super.eGet(featureID, resolve, coreType);
@@ -188,10 +188,10 @@ public class SimpleFiniteStateMachineImpl extends MinimalEObjectImpl.Container i
   {
     switch (featureID)
     {
-      case SimplefsmPackage.SIMPLE_FINITE_STATE_MACHINE__NAME:
+      case ModelPackage.SIMPLE_FINITE_STATE_MACHINE__NAME:
         setName((String)newValue);
         return;
-      case SimplefsmPackage.SIMPLE_FINITE_STATE_MACHINE__STATES:
+      case ModelPackage.SIMPLE_FINITE_STATE_MACHINE__STATES:
         getStates().clear();
         getStates().addAll((Collection<? extends State>)newValue);
         return;
@@ -209,10 +209,10 @@ public class SimpleFiniteStateMachineImpl extends MinimalEObjectImpl.Container i
   {
     switch (featureID)
     {
-      case SimplefsmPackage.SIMPLE_FINITE_STATE_MACHINE__NAME:
+      case ModelPackage.SIMPLE_FINITE_STATE_MACHINE__NAME:
         setName(NAME_EDEFAULT);
         return;
-      case SimplefsmPackage.SIMPLE_FINITE_STATE_MACHINE__STATES:
+      case ModelPackage.SIMPLE_FINITE_STATE_MACHINE__STATES:
         getStates().clear();
         return;
     }
@@ -229,9 +229,9 @@ public class SimpleFiniteStateMachineImpl extends MinimalEObjectImpl.Container i
   {
     switch (featureID)
     {
-      case SimplefsmPackage.SIMPLE_FINITE_STATE_MACHINE__NAME:
+      case ModelPackage.SIMPLE_FINITE_STATE_MACHINE__NAME:
         return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
-      case SimplefsmPackage.SIMPLE_FINITE_STATE_MACHINE__STATES:
+      case ModelPackage.SIMPLE_FINITE_STATE_MACHINE__STATES:
         return states != null && !states.isEmpty();
     }
     return super.eIsSet(featureID);

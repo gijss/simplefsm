@@ -9,8 +9,8 @@
    <extension point="org.eclipse.emf.ecore.generated_package">
       <!-- @generated simplefsm -->
       <package
-            uri="be.kuleuven.learning.simplefsm"
-            class="be.kuleuven.learning.simplefsm.SimplefsmPackage"
+            uri="be.kuleuven.learning.simplefsm.model"
+            class="be.kuleuven.learning.simplefsm.model.ModelPackage"
             genModel="model/simplefsm.xcore"/>
    </extension>
 

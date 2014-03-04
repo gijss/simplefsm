@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+
+   <extension
+         point="org.eclipse.ui.commands">
+      <command
+            name="Create Structural Code"
+            id="be.kuleuven.learning.simplefsm.transform.command.structure">
+      </command>
+   </extension>
+   <extension
+         point="org.eclipse.ui.handlers">
+      <handler
+            commandId="be.kuleuven.learning.simplefsm.transform.command.structure"
+            class="be.kuleuven.learning.simplefsm.transform.handler.StructureHandler">
+      </handler>
+   </extension>
+   <extension
+         point="org.eclipse.ui.bindings">
+      <key
+            commandId="be.kuleuven.learning.simplefsm.transform.command.structure"
+            contextId="org.eclipse.ui.contexts.window"
+            sequence="M1+6"
+            schemeId="org.eclipse.ui.defaultAcceleratorConfiguration">
+      </key>
+   </extension>
+   <extension
+         point="org.eclipse.ui.menus">
+      <menuContribution
+            locationURI="menu:org.eclipse.ui.main.menu?after=additions">
+         <menu
+               label="Sfsm"
+               id="be.kuleuven.learning.simplefsm.transform.menu.sfsm">
+            <command
+                  commandId="be.kuleuven.learning.simplefsm.transform.command.structure"
+                  mnemonic="S"
+                  id="be.kuleuven.learning.simplefsm.transform.menus.structure">
+            </command>
+         </menu>
+      </menuContribution>
+      <menuContribution
+            locationURI="toolbar:org.eclipse.ui.main.toolbar?after=additions">
+         <toolbar
+               id="be.kuleuven.learning.simplefsm.transform.toolbars.sfsmoolbar">
+            <command
+                  commandId="be.kuleuven.learning.simplefsm.transform.commands.sampleCommand"
+                  icon="icons/sample.gif"
+                  tooltip="Say hello world"
+                  id="be.kuleuven.learning.simplefsm.transform.toolbars.sampleCommand">
+            </command>
+         </toolbar>
+      </menuContribution>
+   </extension>
+
+</plugin>

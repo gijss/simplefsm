@@ -12,7 +12,7 @@ public class AbstractSfsmValidator extends org.eclipse.xtext.validation.Abstract
 	@Override
 	protected List<EPackage> getEPackages() {
 	    List<EPackage> result = new ArrayList<EPackage>();
-	    result.add(EPackage.Registry.INSTANCE.getEPackage("be.kuleuven.learning.simplefsm"));
+	    result.add(EPackage.Registry.INSTANCE.getEPackage("be.kuleuven.learning.simplefsm.model"));
 		return result;
 	}
 }
