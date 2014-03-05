@@ -507,9 +507,9 @@ rule__State__Group__4__Impl
     }
 :
 (
-{ before(grammarAccess.getStateAccess().getSTRINGTerminalRuleCall_4()); }
-	RULE_STRING
-{ after(grammarAccess.getStateAccess().getSTRINGTerminalRuleCall_4()); }
+{ before(grammarAccess.getStateAccess().getActionAssignment_4()); }
+(rule__State__ActionAssignment_4)
+{ after(grammarAccess.getStateAccess().getActionAssignment_4()); }
 )
 
 ;
@@ -772,6 +772,21 @@ rule__State__NameAssignment_1
 (
 { before(grammarAccess.getStateAccess().getNameIDTerminalRuleCall_1_0()); }
 	RULE_ID{ after(grammarAccess.getStateAccess().getNameIDTerminalRuleCall_1_0()); }
+)
+
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__State__ActionAssignment_4
+    @init {
+		int stackSize = keepStackSize();
+    }
+:
+(
+{ before(grammarAccess.getStateAccess().getActionSTRINGTerminalRuleCall_4_0()); }
+	RULE_STRING{ after(grammarAccess.getStateAccess().getActionSTRINGTerminalRuleCall_4_0()); }
 )
 
 ;

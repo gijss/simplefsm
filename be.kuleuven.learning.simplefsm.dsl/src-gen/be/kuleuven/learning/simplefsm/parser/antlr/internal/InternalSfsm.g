@@ -198,11 +198,25 @@ ruleState returns [EObject current=null]
     {
     	newLeafNode(otherlv_3, grammarAccess.getStateAccess().getActionKeyword_3());
     }
-this_STRING_4=RULE_STRING
-    { 
-    newLeafNode(this_STRING_4, grammarAccess.getStateAccess().getSTRINGTerminalRuleCall_4()); 
-    }
 (
+(
+		lv_action_4_0=RULE_STRING
+		{
+			newLeafNode(lv_action_4_0, grammarAccess.getStateAccess().getActionSTRINGTerminalRuleCall_4_0()); 
+		}
+		{
+	        if ($current==null) {
+	            $current = createModelElement(grammarAccess.getStateRule());
+	        }
+       		setWithLastConsumed(
+       			$current, 
+       			"action",
+        		lv_action_4_0, 
+        		"STRING");
+	    }
+
+)
+)(
 (
 		{ 
 	        newCompositeNode(grammarAccess.getStateAccess().getOutgoingTransitionsTransitionParserRuleCall_5_0()); 

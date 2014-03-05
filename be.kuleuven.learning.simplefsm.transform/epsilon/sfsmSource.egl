@@ -1,10 +1,31 @@
-/*
- * [%=state.type%].hpp
- *
- */
+import java.util.ArrayList;
 
-#ifndef [%=state.type%]_HPP_
-#define [%=state.type%]_HPP_
+import be.kuleuven.learning.simplefsm.impl.java.SimpleFiniteStateMachine;
+import be.kuleuven.learning.simplefsm.impl.java.State;
+import be.kuleuven.learning.simplefsm.impl.java.Transition;
 
-using namespace RTT;
+public class [%=fsm.name%] {
 
+	public static void main(String[] args) {
+		
+		SimpleFiniteStateMachine [%=fsm.name%] = new SimpleFiniteStateMachine("[%=fsm.name%]", new ArrayList<State>());
+		
+		[%for(state in fsm.states) {%]
+		State [%=state.name%] = new State();
+		[%}%]
+		
+		[%for(state in fsm.states) {%]
+		
+		[%=fsm.name%].getStates().add([%=state.name%]);
+		[%=state.name%].setOwningFSM([%=fsm.name%]);
+		[%=state.name%].setName("[%=state.name%]");
+		[%=state.name%].setAction("[%=state.action%]");
+		[%=state.name%].setTransitions(new ArrayList<Transition>());
+		[%for(transition in state.outgoingTransitions) {%]
+		[%=state.name%].getTransitions().add(new Transition("[%=transition.name%]", "[%=transition.event%]", [%=transition.target.name%], [%=transition.owningState.name%]));
+		[%}%]
+		[%}%]
+		
+		[%=fsm.name%].run();
+	}
+}

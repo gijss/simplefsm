@@ -12,8 +12,8 @@ import java.util.ArrayList;
 
 @SuppressWarnings("all")
 public class InternalSfsmLexer extends Lexer {
-    public static final int RULE_ID=5;
-    public static final int RULE_STRING=4;
+    public static final int RULE_ID=4;
+    public static final int RULE_STRING=5;
     public static final int T__16=16;
     public static final int T__15=15;
     public static final int T__18=18;
@@ -213,10 +213,10 @@ public class InternalSfsmLexer extends Lexer {
         try {
             int _type = RULE_ID;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../be.kuleuven.learning.simplefsm.dsl.ui/src-gen/be/kuleuven/learning/simplefsm/ui/contentassist/antlr/internal/InternalSfsm.g:832:9: ( ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )* )
-            // ../be.kuleuven.learning.simplefsm.dsl.ui/src-gen/be/kuleuven/learning/simplefsm/ui/contentassist/antlr/internal/InternalSfsm.g:832:11: ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
+            // ../be.kuleuven.learning.simplefsm.dsl.ui/src-gen/be/kuleuven/learning/simplefsm/ui/contentassist/antlr/internal/InternalSfsm.g:847:9: ( ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )* )
+            // ../be.kuleuven.learning.simplefsm.dsl.ui/src-gen/be/kuleuven/learning/simplefsm/ui/contentassist/antlr/internal/InternalSfsm.g:847:11: ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
             {
-            // ../be.kuleuven.learning.simplefsm.dsl.ui/src-gen/be/kuleuven/learning/simplefsm/ui/contentassist/antlr/internal/InternalSfsm.g:832:11: ( '^' )?
+            // ../be.kuleuven.learning.simplefsm.dsl.ui/src-gen/be/kuleuven/learning/simplefsm/ui/contentassist/antlr/internal/InternalSfsm.g:847:11: ( '^' )?
             int alt1=2;
             int LA1_0 = input.LA(1);
 
@@ -225,7 +225,7 @@ public class InternalSfsmLexer extends Lexer {
             }
             switch (alt1) {
                 case 1 :
-                    // ../be.kuleuven.learning.simplefsm.dsl.ui/src-gen/be/kuleuven/learning/simplefsm/ui/contentassist/antlr/internal/InternalSfsm.g:832:11: '^'
+                    // ../be.kuleuven.learning.simplefsm.dsl.ui/src-gen/be/kuleuven/learning/simplefsm/ui/contentassist/antlr/internal/InternalSfsm.g:847:11: '^'
                     {
                     match('^'); 
 
@@ -243,7 +243,7 @@ public class InternalSfsmLexer extends Lexer {
                 recover(mse);
                 throw mse;}
 
-            // ../be.kuleuven.learning.simplefsm.dsl.ui/src-gen/be/kuleuven/learning/simplefsm/ui/contentassist/antlr/internal/InternalSfsm.g:832:40: ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
+            // ../be.kuleuven.learning.simplefsm.dsl.ui/src-gen/be/kuleuven/learning/simplefsm/ui/contentassist/antlr/internal/InternalSfsm.g:847:40: ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
             loop2:
             do {
                 int alt2=2;
@@ -292,10 +292,10 @@ public class InternalSfsmLexer extends Lexer {
         try {
             int _type = RULE_INT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../be.kuleuven.learning.simplefsm.dsl.ui/src-gen/be/kuleuven/learning/simplefsm/ui/contentassist/antlr/internal/InternalSfsm.g:834:10: ( ( '0' .. '9' )+ )
-            // ../be.kuleuven.learning.simplefsm.dsl.ui/src-gen/be/kuleuven/learning/simplefsm/ui/contentassist/antlr/internal/InternalSfsm.g:834:12: ( '0' .. '9' )+
+            // ../be.kuleuven.learning.simplefsm.dsl.ui/src-gen/be/kuleuven/learning/simplefsm/ui/contentassist/antlr/internal/InternalSfsm.g:849:10: ( ( '0' .. '9' )+ )
+            // ../be.kuleuven.learning.simplefsm.dsl.ui/src-gen/be/kuleuven/learning/simplefsm/ui/contentassist/antlr/internal/InternalSfsm.g:849:12: ( '0' .. '9' )+
             {
-            // ../be.kuleuven.learning.simplefsm.dsl.ui/src-gen/be/kuleuven/learning/simplefsm/ui/contentassist/antlr/internal/InternalSfsm.g:834:12: ( '0' .. '9' )+
+            // ../be.kuleuven.learning.simplefsm.dsl.ui/src-gen/be/kuleuven/learning/simplefsm/ui/contentassist/antlr/internal/InternalSfsm.g:849:12: ( '0' .. '9' )+
             int cnt3=0;
             loop3:
             do {
@@ -309,7 +309,7 @@ public class InternalSfsmLexer extends Lexer {
 
                 switch (alt3) {
             	case 1 :
-            	    // ../be.kuleuven.learning.simplefsm.dsl.ui/src-gen/be/kuleuven/learning/simplefsm/ui/contentassist/antlr/internal/InternalSfsm.g:834:13: '0' .. '9'
+            	    // ../be.kuleuven.learning.simplefsm.dsl.ui/src-gen/be/kuleuven/learning/simplefsm/ui/contentassist/antlr/internal/InternalSfsm.g:849:13: '0' .. '9'
             	    {
             	    matchRange('0','9'); 
 
@@ -341,10 +341,10 @@ public class InternalSfsmLexer extends Lexer {
         try {
             int _type = RULE_STRING;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../be.kuleuven.learning.simplefsm.dsl.ui/src-gen/be/kuleuven/learning/simplefsm/ui/contentassist/antlr/internal/InternalSfsm.g:836:13: ( ( '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' ) )
-            // ../be.kuleuven.learning.simplefsm.dsl.ui/src-gen/be/kuleuven/learning/simplefsm/ui/contentassist/antlr/internal/InternalSfsm.g:836:15: ( '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
+            // ../be.kuleuven.learning.simplefsm.dsl.ui/src-gen/be/kuleuven/learning/simplefsm/ui/contentassist/antlr/internal/InternalSfsm.g:851:13: ( ( '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' ) )
+            // ../be.kuleuven.learning.simplefsm.dsl.ui/src-gen/be/kuleuven/learning/simplefsm/ui/contentassist/antlr/internal/InternalSfsm.g:851:15: ( '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
             {
-            // ../be.kuleuven.learning.simplefsm.dsl.ui/src-gen/be/kuleuven/learning/simplefsm/ui/contentassist/antlr/internal/InternalSfsm.g:836:15: ( '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
+            // ../be.kuleuven.learning.simplefsm.dsl.ui/src-gen/be/kuleuven/learning/simplefsm/ui/contentassist/antlr/internal/InternalSfsm.g:851:15: ( '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
             int alt6=2;
             int LA6_0 = input.LA(1);
 
@@ -362,10 +362,10 @@ public class InternalSfsmLexer extends Lexer {
             }
             switch (alt6) {
                 case 1 :
-                    // ../be.kuleuven.learning.simplefsm.dsl.ui/src-gen/be/kuleuven/learning/simplefsm/ui/contentassist/antlr/internal/InternalSfsm.g:836:16: '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"'
+                    // ../be.kuleuven.learning.simplefsm.dsl.ui/src-gen/be/kuleuven/learning/simplefsm/ui/contentassist/antlr/internal/InternalSfsm.g:851:16: '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"'
                     {
                     match('\"'); 
-                    // ../be.kuleuven.learning.simplefsm.dsl.ui/src-gen/be/kuleuven/learning/simplefsm/ui/contentassist/antlr/internal/InternalSfsm.g:836:20: ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )*
+                    // ../be.kuleuven.learning.simplefsm.dsl.ui/src-gen/be/kuleuven/learning/simplefsm/ui/contentassist/antlr/internal/InternalSfsm.g:851:20: ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )*
                     loop4:
                     do {
                         int alt4=3;
@@ -381,7 +381,7 @@ public class InternalSfsmLexer extends Lexer {
 
                         switch (alt4) {
                     	case 1 :
-                    	    // ../be.kuleuven.learning.simplefsm.dsl.ui/src-gen/be/kuleuven/learning/simplefsm/ui/contentassist/antlr/internal/InternalSfsm.g:836:21: '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' )
+                    	    // ../be.kuleuven.learning.simplefsm.dsl.ui/src-gen/be/kuleuven/learning/simplefsm/ui/contentassist/antlr/internal/InternalSfsm.g:851:21: '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' )
                     	    {
                     	    match('\\'); 
                     	    if ( input.LA(1)=='\"'||input.LA(1)=='\''||input.LA(1)=='\\'||input.LA(1)=='b'||input.LA(1)=='f'||input.LA(1)=='n'||input.LA(1)=='r'||(input.LA(1)>='t' && input.LA(1)<='u') ) {
@@ -397,7 +397,7 @@ public class InternalSfsmLexer extends Lexer {
                     	    }
                     	    break;
                     	case 2 :
-                    	    // ../be.kuleuven.learning.simplefsm.dsl.ui/src-gen/be/kuleuven/learning/simplefsm/ui/contentassist/antlr/internal/InternalSfsm.g:836:66: ~ ( ( '\\\\' | '\"' ) )
+                    	    // ../be.kuleuven.learning.simplefsm.dsl.ui/src-gen/be/kuleuven/learning/simplefsm/ui/contentassist/antlr/internal/InternalSfsm.g:851:66: ~ ( ( '\\\\' | '\"' ) )
                     	    {
                     	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='!')||(input.LA(1)>='#' && input.LA(1)<='[')||(input.LA(1)>=']' && input.LA(1)<='\uFFFF') ) {
                     	        input.consume();
@@ -422,10 +422,10 @@ public class InternalSfsmLexer extends Lexer {
                     }
                     break;
                 case 2 :
-                    // ../be.kuleuven.learning.simplefsm.dsl.ui/src-gen/be/kuleuven/learning/simplefsm/ui/contentassist/antlr/internal/InternalSfsm.g:836:86: '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\''
+                    // ../be.kuleuven.learning.simplefsm.dsl.ui/src-gen/be/kuleuven/learning/simplefsm/ui/contentassist/antlr/internal/InternalSfsm.g:851:86: '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\''
                     {
                     match('\''); 
-                    // ../be.kuleuven.learning.simplefsm.dsl.ui/src-gen/be/kuleuven/learning/simplefsm/ui/contentassist/antlr/internal/InternalSfsm.g:836:91: ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )*
+                    // ../be.kuleuven.learning.simplefsm.dsl.ui/src-gen/be/kuleuven/learning/simplefsm/ui/contentassist/antlr/internal/InternalSfsm.g:851:91: ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )*
                     loop5:
                     do {
                         int alt5=3;
@@ -441,7 +441,7 @@ public class InternalSfsmLexer extends Lexer {
 
                         switch (alt5) {
                     	case 1 :
-                    	    // ../be.kuleuven.learning.simplefsm.dsl.ui/src-gen/be/kuleuven/learning/simplefsm/ui/contentassist/antlr/internal/InternalSfsm.g:836:92: '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' )
+                    	    // ../be.kuleuven.learning.simplefsm.dsl.ui/src-gen/be/kuleuven/learning/simplefsm/ui/contentassist/antlr/internal/InternalSfsm.g:851:92: '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' )
                     	    {
                     	    match('\\'); 
                     	    if ( input.LA(1)=='\"'||input.LA(1)=='\''||input.LA(1)=='\\'||input.LA(1)=='b'||input.LA(1)=='f'||input.LA(1)=='n'||input.LA(1)=='r'||(input.LA(1)>='t' && input.LA(1)<='u') ) {
@@ -457,7 +457,7 @@ public class InternalSfsmLexer extends Lexer {
                     	    }
                     	    break;
                     	case 2 :
-                    	    // ../be.kuleuven.learning.simplefsm.dsl.ui/src-gen/be/kuleuven/learning/simplefsm/ui/contentassist/antlr/internal/InternalSfsm.g:836:137: ~ ( ( '\\\\' | '\\'' ) )
+                    	    // ../be.kuleuven.learning.simplefsm.dsl.ui/src-gen/be/kuleuven/learning/simplefsm/ui/contentassist/antlr/internal/InternalSfsm.g:851:137: ~ ( ( '\\\\' | '\\'' ) )
                     	    {
                     	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='&')||(input.LA(1)>='(' && input.LA(1)<='[')||(input.LA(1)>=']' && input.LA(1)<='\uFFFF') ) {
                     	        input.consume();
@@ -500,12 +500,12 @@ public class InternalSfsmLexer extends Lexer {
         try {
             int _type = RULE_ML_COMMENT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../be.kuleuven.learning.simplefsm.dsl.ui/src-gen/be/kuleuven/learning/simplefsm/ui/contentassist/antlr/internal/InternalSfsm.g:838:17: ( '/*' ( options {greedy=false; } : . )* '*/' )
-            // ../be.kuleuven.learning.simplefsm.dsl.ui/src-gen/be/kuleuven/learning/simplefsm/ui/contentassist/antlr/internal/InternalSfsm.g:838:19: '/*' ( options {greedy=false; } : . )* '*/'
+            // ../be.kuleuven.learning.simplefsm.dsl.ui/src-gen/be/kuleuven/learning/simplefsm/ui/contentassist/antlr/internal/InternalSfsm.g:853:17: ( '/*' ( options {greedy=false; } : . )* '*/' )
+            // ../be.kuleuven.learning.simplefsm.dsl.ui/src-gen/be/kuleuven/learning/simplefsm/ui/contentassist/antlr/internal/InternalSfsm.g:853:19: '/*' ( options {greedy=false; } : . )* '*/'
             {
             match("/*"); 
 
-            // ../be.kuleuven.learning.simplefsm.dsl.ui/src-gen/be/kuleuven/learning/simplefsm/ui/contentassist/antlr/internal/InternalSfsm.g:838:24: ( options {greedy=false; } : . )*
+            // ../be.kuleuven.learning.simplefsm.dsl.ui/src-gen/be/kuleuven/learning/simplefsm/ui/contentassist/antlr/internal/InternalSfsm.g:853:24: ( options {greedy=false; } : . )*
             loop7:
             do {
                 int alt7=2;
@@ -530,7 +530,7 @@ public class InternalSfsmLexer extends Lexer {
 
                 switch (alt7) {
             	case 1 :
-            	    // ../be.kuleuven.learning.simplefsm.dsl.ui/src-gen/be/kuleuven/learning/simplefsm/ui/contentassist/antlr/internal/InternalSfsm.g:838:52: .
+            	    // ../be.kuleuven.learning.simplefsm.dsl.ui/src-gen/be/kuleuven/learning/simplefsm/ui/contentassist/antlr/internal/InternalSfsm.g:853:52: .
             	    {
             	    matchAny(); 
 
@@ -560,12 +560,12 @@ public class InternalSfsmLexer extends Lexer {
         try {
             int _type = RULE_SL_COMMENT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../be.kuleuven.learning.simplefsm.dsl.ui/src-gen/be/kuleuven/learning/simplefsm/ui/contentassist/antlr/internal/InternalSfsm.g:840:17: ( '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )? )
-            // ../be.kuleuven.learning.simplefsm.dsl.ui/src-gen/be/kuleuven/learning/simplefsm/ui/contentassist/antlr/internal/InternalSfsm.g:840:19: '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )?
+            // ../be.kuleuven.learning.simplefsm.dsl.ui/src-gen/be/kuleuven/learning/simplefsm/ui/contentassist/antlr/internal/InternalSfsm.g:855:17: ( '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )? )
+            // ../be.kuleuven.learning.simplefsm.dsl.ui/src-gen/be/kuleuven/learning/simplefsm/ui/contentassist/antlr/internal/InternalSfsm.g:855:19: '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )?
             {
             match("//"); 
 
-            // ../be.kuleuven.learning.simplefsm.dsl.ui/src-gen/be/kuleuven/learning/simplefsm/ui/contentassist/antlr/internal/InternalSfsm.g:840:24: (~ ( ( '\\n' | '\\r' ) ) )*
+            // ../be.kuleuven.learning.simplefsm.dsl.ui/src-gen/be/kuleuven/learning/simplefsm/ui/contentassist/antlr/internal/InternalSfsm.g:855:24: (~ ( ( '\\n' | '\\r' ) ) )*
             loop8:
             do {
                 int alt8=2;
@@ -578,7 +578,7 @@ public class InternalSfsmLexer extends Lexer {
 
                 switch (alt8) {
             	case 1 :
-            	    // ../be.kuleuven.learning.simplefsm.dsl.ui/src-gen/be/kuleuven/learning/simplefsm/ui/contentassist/antlr/internal/InternalSfsm.g:840:24: ~ ( ( '\\n' | '\\r' ) )
+            	    // ../be.kuleuven.learning.simplefsm.dsl.ui/src-gen/be/kuleuven/learning/simplefsm/ui/contentassist/antlr/internal/InternalSfsm.g:855:24: ~ ( ( '\\n' | '\\r' ) )
             	    {
             	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='\t')||(input.LA(1)>='\u000B' && input.LA(1)<='\f')||(input.LA(1)>='\u000E' && input.LA(1)<='\uFFFF') ) {
             	        input.consume();
@@ -598,7 +598,7 @@ public class InternalSfsmLexer extends Lexer {
                 }
             } while (true);
 
-            // ../be.kuleuven.learning.simplefsm.dsl.ui/src-gen/be/kuleuven/learning/simplefsm/ui/contentassist/antlr/internal/InternalSfsm.g:840:40: ( ( '\\r' )? '\\n' )?
+            // ../be.kuleuven.learning.simplefsm.dsl.ui/src-gen/be/kuleuven/learning/simplefsm/ui/contentassist/antlr/internal/InternalSfsm.g:855:40: ( ( '\\r' )? '\\n' )?
             int alt10=2;
             int LA10_0 = input.LA(1);
 
@@ -607,9 +607,9 @@ public class InternalSfsmLexer extends Lexer {
             }
             switch (alt10) {
                 case 1 :
-                    // ../be.kuleuven.learning.simplefsm.dsl.ui/src-gen/be/kuleuven/learning/simplefsm/ui/contentassist/antlr/internal/InternalSfsm.g:840:41: ( '\\r' )? '\\n'
+                    // ../be.kuleuven.learning.simplefsm.dsl.ui/src-gen/be/kuleuven/learning/simplefsm/ui/contentassist/antlr/internal/InternalSfsm.g:855:41: ( '\\r' )? '\\n'
                     {
-                    // ../be.kuleuven.learning.simplefsm.dsl.ui/src-gen/be/kuleuven/learning/simplefsm/ui/contentassist/antlr/internal/InternalSfsm.g:840:41: ( '\\r' )?
+                    // ../be.kuleuven.learning.simplefsm.dsl.ui/src-gen/be/kuleuven/learning/simplefsm/ui/contentassist/antlr/internal/InternalSfsm.g:855:41: ( '\\r' )?
                     int alt9=2;
                     int LA9_0 = input.LA(1);
 
@@ -618,7 +618,7 @@ public class InternalSfsmLexer extends Lexer {
                     }
                     switch (alt9) {
                         case 1 :
-                            // ../be.kuleuven.learning.simplefsm.dsl.ui/src-gen/be/kuleuven/learning/simplefsm/ui/contentassist/antlr/internal/InternalSfsm.g:840:41: '\\r'
+                            // ../be.kuleuven.learning.simplefsm.dsl.ui/src-gen/be/kuleuven/learning/simplefsm/ui/contentassist/antlr/internal/InternalSfsm.g:855:41: '\\r'
                             {
                             match('\r'); 
 
@@ -650,10 +650,10 @@ public class InternalSfsmLexer extends Lexer {
         try {
             int _type = RULE_WS;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../be.kuleuven.learning.simplefsm.dsl.ui/src-gen/be/kuleuven/learning/simplefsm/ui/contentassist/antlr/internal/InternalSfsm.g:842:9: ( ( ' ' | '\\t' | '\\r' | '\\n' )+ )
-            // ../be.kuleuven.learning.simplefsm.dsl.ui/src-gen/be/kuleuven/learning/simplefsm/ui/contentassist/antlr/internal/InternalSfsm.g:842:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
+            // ../be.kuleuven.learning.simplefsm.dsl.ui/src-gen/be/kuleuven/learning/simplefsm/ui/contentassist/antlr/internal/InternalSfsm.g:857:9: ( ( ' ' | '\\t' | '\\r' | '\\n' )+ )
+            // ../be.kuleuven.learning.simplefsm.dsl.ui/src-gen/be/kuleuven/learning/simplefsm/ui/contentassist/antlr/internal/InternalSfsm.g:857:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
             {
-            // ../be.kuleuven.learning.simplefsm.dsl.ui/src-gen/be/kuleuven/learning/simplefsm/ui/contentassist/antlr/internal/InternalSfsm.g:842:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
+            // ../be.kuleuven.learning.simplefsm.dsl.ui/src-gen/be/kuleuven/learning/simplefsm/ui/contentassist/antlr/internal/InternalSfsm.g:857:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
             int cnt11=0;
             loop11:
             do {
@@ -707,8 +707,8 @@ public class InternalSfsmLexer extends Lexer {
         try {
             int _type = RULE_ANY_OTHER;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../be.kuleuven.learning.simplefsm.dsl.ui/src-gen/be/kuleuven/learning/simplefsm/ui/contentassist/antlr/internal/InternalSfsm.g:844:16: ( . )
-            // ../be.kuleuven.learning.simplefsm.dsl.ui/src-gen/be/kuleuven/learning/simplefsm/ui/contentassist/antlr/internal/InternalSfsm.g:844:18: .
+            // ../be.kuleuven.learning.simplefsm.dsl.ui/src-gen/be/kuleuven/learning/simplefsm/ui/contentassist/antlr/internal/InternalSfsm.g:859:16: ( . )
+            // ../be.kuleuven.learning.simplefsm.dsl.ui/src-gen/be/kuleuven/learning/simplefsm/ui/contentassist/antlr/internal/InternalSfsm.g:859:18: .
             {
             matchAny(); 
 

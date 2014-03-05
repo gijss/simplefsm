@@ -17,8 +17,16 @@ Installation instructions
     3. Install [Xtext](https://www.eclipse.org/Xtext/)
     4. Install [Epsilon](https://www.eclipse.org/epsilon/)
 3. Start Eclipse and import sources into workspace
-4.  ...
-
+4. choose Run As -> Generate Xtext Artifacts from the context menu of the grammar editor
+4. (maybe register ecore in Epsilon)
+5. Launch Runtime Eclipse
+6. Add project `be.kuleuven.learning.simplefsm.impl.java` to the new workspace
+7. Create new project and define sfsm in file with .sfsm extension
+8. Add dependency to `be.kuleuven.learning.simplefsm.impl.java` in newly created project`
+9. Select sfsm file and choose Sfsm -> Create Structural Code from menu bar
+10. Refresh workspace and open new .java file
+11. Run java file!
+ 
 More information
 ---
 

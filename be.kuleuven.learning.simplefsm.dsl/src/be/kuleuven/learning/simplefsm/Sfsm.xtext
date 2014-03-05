@@ -14,7 +14,7 @@ SimpleFiniteStateMachine:
 State returns State:
 	'state' name=ID
 	'{'
-		'action' STRING
+		'action' action=STRING
 		(outgoingTransitions += Transition)*
 	'}'
 ;

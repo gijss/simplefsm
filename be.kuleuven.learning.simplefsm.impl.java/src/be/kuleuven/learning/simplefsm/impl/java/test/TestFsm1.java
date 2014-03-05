@@ -14,12 +14,12 @@ public class TestFsm1 {
 
 	public static void main(String[] args) {
 		
-		List<State> states = new ArrayList<State>();
-		SimpleFiniteStateMachine sfsm = new SimpleFiniteStateMachine("TestFsm1", states);
+		SimpleFiniteStateMachine sfsm = new SimpleFiniteStateMachine("TestFsm1", new ArrayList<State>());
 		
-		State state1 = new State(), state2 = new State();
+		State state1 = new State();
+		State state2 = new State();
 		
-		states.add(state1);
+		sfsm.getStates().add(state1);
 		state1.setOwningFSM(sfsm);
 		state1.setName("state1");
 		state1.setAction("action1");
@@ -27,7 +27,7 @@ public class TestFsm1 {
 		state1.getTransitions().add(new Transition("a", "a", state1, state1));
 		state1.getTransitions().add(new Transition("b", "b", state2, state1));
 		
-		states.add(state2);
+		sfsm.getStates().add(state2);
 		state2.setOwningFSM(sfsm);
 		state2.setName("state2");
 		state2.setAction("action2");

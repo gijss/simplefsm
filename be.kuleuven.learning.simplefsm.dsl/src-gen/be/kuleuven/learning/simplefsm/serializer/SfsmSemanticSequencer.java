@@ -57,7 +57,7 @@ public class SfsmSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	
 	/**
 	 * Constraint:
-	 *     (name=ID outgoingTransitions+=Transition*)
+	 *     (name=ID action=STRING outgoingTransitions+=Transition*)
 	 */
 	protected void sequence_State(EObject context, State semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);

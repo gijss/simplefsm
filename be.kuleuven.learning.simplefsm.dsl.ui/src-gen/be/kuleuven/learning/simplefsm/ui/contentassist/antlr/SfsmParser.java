@@ -44,6 +44,7 @@ public class SfsmParser extends AbstractContentAssistParser {
 					put(grammarAccess.getSimpleFiniteStateMachineAccess().getStatesAssignment_4(), "rule__SimpleFiniteStateMachine__StatesAssignment_4");
 					put(grammarAccess.getSimpleFiniteStateMachineAccess().getStatesAssignment_5(), "rule__SimpleFiniteStateMachine__StatesAssignment_5");
 					put(grammarAccess.getStateAccess().getNameAssignment_1(), "rule__State__NameAssignment_1");
+					put(grammarAccess.getStateAccess().getActionAssignment_4(), "rule__State__ActionAssignment_4");
 					put(grammarAccess.getStateAccess().getOutgoingTransitionsAssignment_5(), "rule__State__OutgoingTransitionsAssignment_5");
 					put(grammarAccess.getTransitionAccess().getEventAssignment_1(), "rule__Transition__EventAssignment_1");
 					put(grammarAccess.getTransitionAccess().getTargetAssignment_3(), "rule__Transition__TargetAssignment_3");

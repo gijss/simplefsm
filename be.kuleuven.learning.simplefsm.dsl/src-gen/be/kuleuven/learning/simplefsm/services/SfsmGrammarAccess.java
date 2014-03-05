@@ -78,16 +78,17 @@ public class SfsmGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cNameIDTerminalRuleCall_1_0 = (RuleCall)cNameAssignment_1.eContents().get(0);
 		private final Keyword cLeftCurlyBracketKeyword_2 = (Keyword)cGroup.eContents().get(2);
 		private final Keyword cActionKeyword_3 = (Keyword)cGroup.eContents().get(3);
-		private final RuleCall cSTRINGTerminalRuleCall_4 = (RuleCall)cGroup.eContents().get(4);
+		private final Assignment cActionAssignment_4 = (Assignment)cGroup.eContents().get(4);
+		private final RuleCall cActionSTRINGTerminalRuleCall_4_0 = (RuleCall)cActionAssignment_4.eContents().get(0);
 		private final Assignment cOutgoingTransitionsAssignment_5 = (Assignment)cGroup.eContents().get(5);
 		private final RuleCall cOutgoingTransitionsTransitionParserRuleCall_5_0 = (RuleCall)cOutgoingTransitionsAssignment_5.eContents().get(0);
 		private final Keyword cRightCurlyBracketKeyword_6 = (Keyword)cGroup.eContents().get(6);
 		
 		//State:
-		//	"state" name=ID "{" "action" STRING outgoingTransitions+=Transition* "}";
+		//	"state" name=ID "{" "action" action=STRING outgoingTransitions+=Transition* "}";
 		public ParserRule getRule() { return rule; }
 
-		//"state" name=ID "{" "action" STRING outgoingTransitions+=Transition* "}"
+		//"state" name=ID "{" "action" action=STRING outgoingTransitions+=Transition* "}"
 		public Group getGroup() { return cGroup; }
 
 		//"state"
@@ -105,8 +106,11 @@ public class SfsmGrammarAccess extends AbstractGrammarElementFinder {
 		//"action"
 		public Keyword getActionKeyword_3() { return cActionKeyword_3; }
 
+		//action=STRING
+		public Assignment getActionAssignment_4() { return cActionAssignment_4; }
+
 		//STRING
-		public RuleCall getSTRINGTerminalRuleCall_4() { return cSTRINGTerminalRuleCall_4; }
+		public RuleCall getActionSTRINGTerminalRuleCall_4_0() { return cActionSTRINGTerminalRuleCall_4_0; }
 
 		//outgoingTransitions+=Transition*
 		public Assignment getOutgoingTransitionsAssignment_5() { return cOutgoingTransitionsAssignment_5; }
@@ -212,7 +216,7 @@ public class SfsmGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//State:
-	//	"state" name=ID "{" "action" STRING outgoingTransitions+=Transition* "}";
+	//	"state" name=ID "{" "action" action=STRING outgoingTransitions+=Transition* "}";
 	public StateElements getStateAccess() {
 		return (pState != null) ? pState : (pState = new StateElements());
 	}
