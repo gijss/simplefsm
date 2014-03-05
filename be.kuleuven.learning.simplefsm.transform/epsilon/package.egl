@@ -1,0 +1,14 @@
+[%
+	
+	var fsm : SimpleFiniteStateMachine := SimpleFiniteStateMachine.allInstances().at(0);
+	var states : OrderedSet := fsm.states;
+
+	//TaskContext
+	for(state in states) {
+		var stateSourceTemplate := TemplateFactory.load('stateSource.egl');
+			
+		stateSourceTemplate.populate('state', state);
+		stateSourceTemplate.generate('src/' + "state" + '.java');
+	}
+	
+%]

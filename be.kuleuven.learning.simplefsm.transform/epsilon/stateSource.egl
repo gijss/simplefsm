@@ -1,0 +1,10 @@
+/*
+ * [%=state.type%].hpp
+ *
+ */
+
+#ifndef [%=state.type%]_HPP_
+#define [%=state.type%]_HPP_
+
+using namespace RTT;
+
