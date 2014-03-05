@@ -1,14 +1,11 @@
 [%
 	
 	var fsm : SimpleFiniteStateMachine := SimpleFiniteStateMachine.allInstances().at(0);
-	var states : OrderedSet := fsm.states;
+	//var states : OrderedSet := fsm.states;
 
-	//TaskContext
-	for(state in states) {
-		var stateSourceTemplate := TemplateFactory.load('stateSource.egl');
+	var stateSourceTemplate := TemplateFactory.load('sfsmSource.egl');
 			
-		stateSourceTemplate.populate('state', state);
-		stateSourceTemplate.generate('src/' + "state" + '.java');
-	}
+	stateSourceTemplate.populate('fsm', fsm);
+	stateSourceTemplate.generate('src/' + fsm.name + '.java');
 	
 %]
