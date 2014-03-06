@@ -13,11 +13,12 @@ Installation and usage
 ###Installation instructions
 1. Download sources: `git clone https://github.com/gijss/simplefsm.git`
 2. Install dependencies
-    1. Install [Eclipse](https://www.eclipse.org/downloads/) (tested with Eclipse 4.3.1)
-    2. Install [Xcore](https://wiki.eclipse.org/Xcore) (tested with Xcore 1.1.1)
-    3. Install [Xtext](https://www.eclipse.org/Xtext/) (tested with Xtext 2.5.3)
-    4. Install [Epsilon](https://www.eclipse.org/epsilon/) (tested with Epsilon 1.1.0)
-    5. Download Rodinia sources: `git clone http://git.mech.kuleuven.be/robotics/rodinia.git` (tested with Master branch from Mon, 28 Oct 2013 18:33:45)
+    1. Install Java (tested with openjdk-7-jdk)
+    2. Install [Eclipse](https://www.eclipse.org/downloads/) (tested with Eclipse 4.3.2)
+    3. Install [Xcore](https://wiki.eclipse.org/Xcore) (tested with Xcore 1.1.2)
+    4. Install [Xtext](https://www.eclipse.org/Xtext/) (tested with Xtext 2.5.3)
+    5. Install [Epsilon](https://www.eclipse.org/epsilon/) (tested with Epsilon 1.1.0)
+    6. Download Rodinia sources: `git clone http://git.mech.kuleuven.be/robotics/rodinia.git` (tested with Master branch from Mon, 28 Oct 2013 18:33:45)
 
 ###Build programming environment
 3. Start Eclipse and import into workspace:
