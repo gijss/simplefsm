@@ -3,3 +3,5 @@
 /SimplefsmPackageImpl.java
 /StateImpl.java
 /TransitionImpl.java
+/ModelFactoryImpl.java
+/ModelPackageImpl.java
