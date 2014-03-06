@@ -18,12 +18,12 @@ Installation and usage
     3. Install [Xcore](https://wiki.eclipse.org/Xcore) (tested with Xcore 1.1.2)
     4. Install [Xtext](https://www.eclipse.org/Xtext/) (tested with Xtext 2.5.3)
     5. Install [Epsilon](https://www.eclipse.org/epsilon/) (tested with Epsilon 1.1.0)
-    6. Download Rodinia sources: `git clone http://git.mech.kuleuven.be/robotics/rodinia.git` (tested with Master branch from Mon, 28 Oct 2013 18:33:45)
+    6. Download Rodinia sources: `git clone http://git.mech.kuleuven.be/robotics/rodinia.git` (tested with branch Graphiti from 2014-02-03)
 
 ###Build programming environment
 3. Start Eclipse and import into workspace:
     1. All projects from simplefsm repository
-    2. Project `be.kuleuven.rodinia.epsilon.service` from Rodinia repository
+    2. Project `be.kuleuven.rodinia.epsilon.service` from Rodinia repository (Graphiti branch)
 4. Generate Xtext Artifacts:
     1. Select `Sfsm.xtext` from `be.kuleuven.learning.simplefsm.dsl` project and
     2. Right click and choose Run As -> Generate Xtext Artifacts from its context menu
